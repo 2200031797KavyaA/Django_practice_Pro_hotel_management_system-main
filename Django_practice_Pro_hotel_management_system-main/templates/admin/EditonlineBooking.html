@@ -1,0 +1,117 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Edit online Booking  page
+{% endblock %}
+  {% block  pagecontant %}
+         <!-- page content -->
+
+          <!--************************************
+			form part start
+		*************************************-->
+    {% load static %}
+   <link rel="stylesheet" href="{%static 'static_files/css/style.css'%}">
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Edit Online Booking Customer</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'online_Booking_info' %}">Online Booking</a>
+                     </div>
+                 </div>
+            </div>
+            <div class="edit_stu_form" >
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {%csrf_token%}
+                        <div class="col-lg-12">
+                            <div class="form-group edit_form">
+                                <label class="form-label">Id</label>
+                                <input type="text" name="Id" class="form-control" value={{data.Id}} readonly>
+                              </div>
+                             <div class="form-group edit_form">
+                                  <label class="form-label">Nid No</label>
+                                <input type="text"  name="Nid_No" class="form-control" value={{data.Nid_No}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Check in</label>
+                                <input type="text"  name="Check_in" class="form-control" value={{data.Check_in}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Check out</label>
+                                <input type="text"  name="Check_out" class="form-control" value={{data.Check_out}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Adult</label>
+                                    <select class="form-control" name="ADULT">
+                                     <option value="ADULT"   {%if select == 1%} selected {%endif%}>ADULT</option>
+                                     <option value="1 ADULT" {%if select == 2%} selected {%endif%}>1 ADULT</option>
+                                     <option value="2 ADULT" {%if select == 3%} selected {%endif%}>2 ADULT</option>
+                                     <option value="3 ADULT" {%if select == 4%} selected {%endif%}>3 ADULT</option>
+                                     <option value="4 ADULT" {%if select == 5%} selected {%endif%}>4 ADULT</option>
+                                   </select>
+                              </div>
+                             <div class="form-group edit_form">
+                                  <label class="form-label">Children</label>
+                                   <select class="form-control" name="CHILDREN">
+                                     <option value="CHILDREN"   {%if select == 1%} selected {%endif%}>CHILDREN</option>
+                                     <option value="1 CHILDREN" {%if select == 2%} selected {%endif%}>1 CHILDREN</option>
+                                     <option value="2 CHILDREN" {%if select == 3%} selected {%endif%}>2 CHILDREN</option>
+                                     <option value="3 CHILDREN" {%if select == 4%} selected {%endif%}>3 CHILDREN</option>
+                                     <option value="4 CHILDREN" {%if select == 5%} selected {%endif%}>4 CHILDREN</option>
+                                   </select>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Name</label>
+                                <input type="text"  name="Name" class="form-control" value={{data.Name}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Surname</label>
+                                <input type="text"  name="Surname" class="form-control" value={{data.Surname}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Email</label>
+                                <input type="text"  name="Email" class="form-control" value={{data.Email}}>
+                              </div>
+
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Phone Number</label>
+                                <input type="text"  name="Phone_Number" class="form-control" value={{data.Phone_Number}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">City</label>
+                                <input type="text"  name="City" class="form-control" value={{data.City}}>
+                              </div>
+                                <div class="form-group edit_form">
+                                  <label class="form-label">Country</label>
+                                <input type="text"  name="Country" class="form-control" value={{data.Country}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                 <label class="form-label">Image</label>
+                                <input type="file" name="Img" class="form-control" value={{data.Img}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Address</label>
+                                <input type="text"  name="Address" class="form-control" value={{data.Address}}>
+                              </div>
+                        </div>
+
+                    <div class="col-lg-12">
+                        <div class="edit_btn">
+                           <button type="submit">Update</button>
+                        </div>
+                        <div class="edit_btn">
+                            <button type="reset">Clear</button>
+                        </div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+
+   {% endblock %}

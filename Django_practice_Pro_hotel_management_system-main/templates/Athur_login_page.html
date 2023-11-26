@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Author Login Page</title>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;
+                 600;700;800&display=swap"
+    rel="stylesheet"
+  />
+   {% load static %}
+  <!-- Bootstrap Css -->
+  <link rel="stylesheet" href="{%static 'Allfiles/Css/bootstrap.min.css'%}">
+  <!-- Fontawesome Css -->
+   <link rel="stylesheet" href="{%static 'Allfiles/Css/fontawesome.min.css'%}">
+
+  <!-- all plugin Css-->
+
+   <!-- Style  Css -->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/Style.css'%}">
+  <!-- Responsive  Css -->
+  <link rel="stylesheet" href="{%static 'Allfiles/Css/Responsive.css'%}">
+
+</head>
+ <!--************************************
+			login part start
+		*************************************-->
+      <section id="slide">
+        <div class="login_bg_Pic" style="background: url({%static 'Allfiles/photo/slider-5.jpg'%})">
+          <div class="container">
+            <div class="row">
+              <div class="home-link text-center">
+                <p>
+                  <a href="{% url 'Home' %}">Home</a><i class="fas fa-angle-right"></i><a href="#">Login</a>
+                </p>
+              </div>
+              <div class="login_info text-center">
+                <div class="col-lg-10 text-center">
+                  <div class="login_txt text-center">
+                    <h2> Lucia <span> Hotel & Resort </span></h2>
+                    <h4>Authority Login into your account</h4>
+                  </div>
+                </div>
+                <form method="post" action="" target="_blank">
+                  {% csrf_token %}
+                  <div class="col-lg-10">
+                    <div class="login_email">
+                      <input type="email" name="Email" placeholder="Enter Email" required/>
+                    </div>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="login_pass">
+                      <input type="password" name="Password" placeholder="Enter Password" required/>
+                    </div>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="checkbox1">
+                      <input type="checkbox" required/><label for="checkbox1">Keep me logged in</label>
+                    </div>
+                    <div class="forget_pass">
+                      <a href="{% url 'Aothur_Fotpass' %}" class="">Forgot Password</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-10">
+                    <div class="login_btn">
+                      <button type="submit" class="">Log in</button>
+                    </div>
+                  </div>
+                </form>
+                <div class="col-lg-8">
+                  <div class="register_btn">
+                    <p>
+                      Don't have an account?
+                      <a href="{% url 'Aothur_Reg' %}" class="">Register</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--************************************
+
+			login part End
+		*************************************-->
+
+ <!--bootstrap js-->
+     <script src="{%static 'Allfiles/Js/bootstrap.bundle.min.js'%}"></script>
+  <!--jquary js-->
+     <script src="{%static 'Allfiles/Js/jquery-1.12.4.min.js'%}"></script>
+  <!--all plugin js-->
+  <!--main js-->
+   <script src="{%static 'Allfiles/Js/Script.js'%}"></script>
+</body>

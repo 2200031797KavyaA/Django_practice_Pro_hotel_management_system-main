@@ -1,0 +1,92 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Edit Rooms page
+{% endblock %}
+  {% block  pagecontant %}
+         <!-- page content -->
+
+          <!--************************************
+			form part start
+		*************************************-->
+    {% load static %}
+   <link rel="stylesheet" href="{%static 'static_files/css/style.css'%}">
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Edit Rooms</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'Add_room' %}">Add Rooms</a>
+                     </div>
+                 </div>
+            </div>
+            <div class="edit_stu_form" >
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {%csrf_token%}
+
+                        <div class="col-lg-12">
+                             <div class="form-group edit_form">
+                                   <label class="form-label">Room Number</label>
+                                   <select class="form-control" name="Room_Number" readonly>
+                                         <option value="Room Number"  {%if select == 1%} selected {%endif%}>Room Number</option>
+                                         <option value="Room101"     {%if select == 2%} selected {%endif%}>Room101</option>
+                                         <option value="Room102"     {%if select == 3%} selected {%endif%} >Room102</option>
+                                         <option value="Room103"      {%if select == 4%} selected {%endif%}>Room103</option>
+                                         <option value="Room104"      {%if select == 5%} selected {%endif%}>Room104</option>
+                                   </select>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Room Type</label>
+                                   <select class="form-control" name="Room_Type">
+                                         <option value="Select Room"  {%if select == 1%} selected {%endif%}>Select Room</option>
+                                         <option value="Delux"        {%if select == 2%} selected {%endif%}>Delux</option>
+                                         <option value="Super Delux"   {%if select == 3%} selected {%endif%}>Super Delux</option>
+                                         <option value="Single"         {%if select == 4%} selected {%endif%}>Single</option>
+                                         <option value="Double"         {%if select == 5%} selected {%endif%}>Double</option>
+                                   </select>
+                              </div>
+                                <div class="form-group edit_form">
+                                  <label class="form-label">Room Floor </label>
+                                  <select class="form-control" name="Room_Floor" required>
+                                      <option value="Room Floor" {%if select == 1%} selected {%endif%}>Room Floor</option>
+                                      <option value="Floor_G"    {%if select == 2%} selected {%endif%}>Floor_G</option>
+                                      <option value="Floor_First" {%if select == 3%} selected {%endif%}>Floor_First</option>
+                                       <option value="Floor_Second" {%if select == 4%} selected {%endif%}>Floor_Second</option>
+                                       <option value="Floor_Thirt"  {%if select == 5%} selected {%endif%}>Floor_Thirt</option>
+                                  </select>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Room Facility</label>
+                                <input type="text"  name="Room_Facility" class="form-control" value={{data.Room_Facility}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Room Price</label>
+                                <input type="text"  name="Room_Price" class="form-control" value={{data.Room_Price}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                 <label class="form-label">Room Image</label>
+                                <input type="file" name="Room_Image" class="form-control" value={{data.Room_Image}}>
+                              </div>
+
+                        </div>
+
+                    <div class="col-lg-12">
+                        <div class="edit_btn">
+                           <button type="submit">Update</button>
+                        </div>
+                        <div class="edit_btn">
+                            <button type="reset">Clear</button>
+                        </div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+
+   {% endblock %}

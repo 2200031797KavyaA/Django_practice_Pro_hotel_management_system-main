@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>
+       {% block title %}
+		  {% endblock %}
+     </title>
+     <!-- GOOGLE FONT -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;
+                 600;700;800&display=swap" rel="stylesheet">
+     {% load static %}
+     <!-- Bootstrap Css -->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/bootstrap.min.css'%}">
+
+     <!-- Fontawesome Css -->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/fontawesome.min.css'%}">
+     <!-- all plugin Css-->
+
+      <!--textilate  plugin Css-->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/animate.css'%}">
+      <!--Slick plugin Css-->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/slick.css'%}">
+      <!--datetimepicker plugin Css-->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/jquery.datetimepicker.min.css'%}">
+      <!--Modal Video Css-->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/modal-video.min.css'%}">
+      <!--magnific-popup Css-->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/magnific-popup.css'%}">
+      <!--colorfulTab Css-->
+
+
+      <!-- Style  Css -->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/Style.css'%}">
+      <!-- Responsive  Css -->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/Responsive.css'%}">
+
+</head>
+<body>
+
+     <!--================Header Area Start=================-->
+     <header id="header">
+            <div class="container">
+                 <div class="row">
+                  <!--HEADER_TOP-->
+                    <div class="header_top">
+                         <div class="row">
+                             <div class="col-lg-7">
+                                 <div class="header_top_left">
+                                     <ul>
+                                        <li><span><i class="fas fa-map-marker-alt"></i>30 Jubilee Hills, Hyderabad</span></li>
+                                        <li><span><i class="fas fa-phone-alt"></i>9182285606</span></li>
+                                        <li><span><i class="far fa-envelope"></i>hotellucia@gmail.com</span></li>
+                                    </ul>
+                                 </div>
+                             </div>
+                            <div class="col-lg-5">
+                                <div class="header_top_right">
+                                   <ul>
+                                      <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                                      <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                                      <li><a href="https://plus.google.com/"><i class="fab fa-google-plus-g"></i></a></li>
+                                      <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                                      <li> <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a></li>
+                                       <li><a href="{% url 'Aothur_login' %}">Login</a></li>
+
+                                   </ul>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                 </div>
+             </div>
+             <!--Header menu-->
+             <nav class="navbar navbar-expand-lg  menu">
+                 <div class="container">
+                   <a class="menu_logo" href="#">
+                     <h1>Lucia</h1><span>Hotel & Resort</span>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Mynav" >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                   <div class="collapse navbar-collapse " id="Mynav">
+                      <ul class="navbar-nav m-0 p-0">
+                        <li class="nav-item">
+                          <a class="nav-link " href="#" id="" data-bs-toggle="">
+                             Home<i class="fas fa-angle-down"></i>
+                          </a>
+                          <ul class="">
+                            <li><a class="" href="#">Home Page 1</a></li>
+                            <li><a class="" href="#">Home page 2</a></li>
+                         </ul>
+                       </li>
+                       <li class="nav-item menu-item">
+                          <a class="nav-link Room_Rate" href="#" id="" data-bs-toggle="">
+                             Room & Rate<i class="fas fa-angle-down"></i>
+                          </a>
+                           <ul class="menu-drop">
+                            <li><a class="" href="#">Room Grid</a></li>
+                            <li><a class="" href="#">Room List</a></li>
+                             <li><a class="" href="#">Room Details</a></li>
+                           </ul>
+                       </li>
+                       <li class="nav-item menu-item">
+                          <a class="nav-link  Event" href="#" id="" data-bs-toggle="">
+                            Gallery
+                          </a>
+                       </li>
+                       <li class="nav-item menu-item">
+                          <a class="nav-link  Location" href="#" id="" data-bs-toggle="b">
+                            Location
+                          </a>
+                       </li>
+                         <li class="nav-item menu-item">
+                          <a class="nav-link Pages" href="#" id="" data-bs-toggle="">
+                             Pages<i class="fas fa-angle-down"></i>
+                          </a>
+                           <ul class="menu-drop Room_Rate_drop">
+                            <li><a class="" href="#">Events</a></li>
+                            <li><a class="" href="#">Our Restaurant</a></li>
+                            <li><a class="" href="#">Spa & Relax</a></li>
+                            <li><a class="" href="#">Our Service</a></li>
+                            <li><a class="" href="#">Staff</a></li>
+                            <li><a class="" href="#">404 Page</a></li>
+                           </ul>
+                       </li>
+                       <li class="nav-item menu-item ">
+                          <a class="nav-link About_Us" href="#" >
+                            About Us
+                          </a>
+                       </li>
+                       <li class="nav-item menu-item ">
+                          <a class="nav-link  Contact_Us" href="#" id="" data-bs-toggle="">
+                             Contact Us
+                          </a>
+                       </li>
+                     </ul>
+                   </div>
+                   <div class="Booking_button">
+                    <a href="{% url 'OnlineBooking' %}">Booking Now<span><i class="fas fa-angle-double-right"></i></span></a>
+                   </div>
+                 </div>
+             </nav>
+     </header>
+
+
+   {% block contant %}
+
+        {% endblock %}
+   <!--================footer Part start =================-->
+
+ <footer id="footer">
+     <div class="container">
+         <div class="row">
+               <div class="col-lg-3">
+                  <div class="footer_content1">
+                      <a class="menu_logo" href="#">
+                         <h1>Lucia</h1><span>Hotel & Resort</span>
+                      </a>
+                      <p>Welcome to Hotel Booking Management, your one-stop solution for hassle-free hotel reservations.Quickly find the perfect hotel for your next stay. Use our search tool to browse and book hotels in the area. Make sure to drop a feedback. Thank You. See you again.</p>
+                      <ul>
+                           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                           <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="col-lg-3 ">
+                  <div class="footer_content2">
+                      <h3> CONTACT US </h3>
+                     <div class="row">
+                        <div class="col-lg-6">
+                              <ul class="footer_list1">
+                                    <li><a href="#"><i class="fas fa-map-marker-alt"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-phone-alt"></i></a></li>
+                                    <li><a href="#"><i class="far fa-envelope"></i></a></li>
+                              </ul>
+                        </div>
+                        <div class="col-lg-6">
+                              <ul class="footer_list2">
+                                    <li><a href="#">30 Jubilee Hills, Hyderabad</a></li>
+                                    <li><a href="#">9182285606 </a></li>
+                                    <li><a href="#">hotellucia@gmail.com</a></li>
+                              </ul>
+                        </div>
+                  </div>
+               </div>
+             </div>
+
+             <div class="col-lg-3 ">
+                  <div class="footer_content2">
+                     <h3> QUICK LINKS </h3>
+                    <ul class="footer_link">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Room Details</a></li>
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                     </ul>
+                  </div>
+             </div>
+
+             <div class="col-lg-3 ">
+                  <div class="footer_content4">
+                     <h3> COLLECTIONS </h3>
+                    <ul class="footer_img">
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/room-1.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/room-2.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/room-3.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/room-4.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/room-5.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/room-6.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/gallery-1.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/gallery-2.jpg'%}" alt="img"></a></li>
+                        <li><a href="#"><img src="{%static 'Allfiles/Photo/gallery-3.jpg'%}" alt="img"></a></li>
+                     </ul>
+                  </div>
+             </div>
+           </div>
+         </div>
+     </div>
+ </footer>
+
+       <!--================footer Part end =================-->
+
+
+
+
+
+
+
+
+
+     <!--bootstrap js-->
+     <script src="{%static 'Allfiles/Js/bootstrap.bundle.min.js'%}"></script>
+     <!--jquary js-->
+     <script src="{%static 'Allfiles/Js/jquery-1.12.4.min.js'%}"></script>
+      <!-- textilate js -->
+     <script src="{%static 'Allfiles/Js/jquery.textillate.js'%}"></script>
+     <script src="{%static 'Allfiles/Js/jquery.lettering.js'%}"></script>
+     <!-- Slick js -->
+     <script src="{%static 'Allfiles/Js/slick.min.js'%}"></script>
+     <!--datetimepicker js-->
+     <script src="{%static 'Allfiles/Js/jquery.datetimepicker.full.min.js'%}"></script>
+     <!--Modal Video js-->
+     <script src="{%static 'Allfiles/Js/jquery-modal-video.min.js'%}"></script>
+     <!--magnific-popup Js-->
+     <script src="{%static 'Allfiles/Js/jquery.magnific-popup.min.js'%}"></script>
+      <!--Tabs js-->
+     <script src="{%static 'Allfiles/Js/tabs.js'%}"></script>
+      <!--Counterup js plugin-->
+     <script src="{%static 'Allfiles/Js/jquery.counterup.min.js'%}"></script>
+     <!--colorfulTab js-->
+
+     <!--main js-->
+     <script src="{%static 'Allfiles/Js/Script.js'%}"></script>
+
+</body>

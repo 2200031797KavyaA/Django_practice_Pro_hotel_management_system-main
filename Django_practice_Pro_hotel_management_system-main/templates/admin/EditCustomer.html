@@ -1,0 +1,145 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Edit Customers page
+{% endblock %}
+  {% block  pagecontant %}
+         <!-- page content -->
+
+          <!--************************************
+			form part start
+		*************************************-->
+    {% load static %}
+   <link rel="stylesheet" href="{%static 'static_files/css/style.css'%}">
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Edit Customer</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'AddCustomer' %}">Add Customers</a>
+                     </div>
+                 </div>
+            </div>
+            <div class="edit_stu_form" >
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {%csrf_token%}
+                       
+                        <div class="col-lg-12">
+                            <div class="form-group edit_form">
+                                <label class="form-label">Customer Id</label>
+                                <input type="text" name="Customer_Id " class="form-control" value={{data.Customer_Id }} readonly>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Personal Identity</label>
+                                <input type="text"  name="Personal_Identity" class="form-control" value={{data.Personal_Identity}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Check In</label>
+                                <input type="text"  name="Check_in" class="form-control" value={{data.Check_in}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Check Out</label>
+                                <input type="text"  name="Check_out" class="form-control" value={{data.Check_out}}>
+                              </div>
+                             <div class="form-group edit_form">
+                                  <label class="form-label">First Name</label>
+                                <input type="text"  name="First_Name" class="form-control" value={{data.First_Name}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Last Name</label>
+                                <input type="text"  name="Last_Name" class="form-control" value={{data.Last_Name}}>
+                              </div>
+                             <div class="form-group edit_form">
+                                  <label class="form-label">Email</label>
+                                <input type="text"  name="Email" class="form-control" value={{data.Email}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Mobile Number</label>
+                                <input type="text"  name="Mobile_Number" class="form-control" value={{data.Mobile_Number}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                 <label class="form-label">ADULT</label>
+                                    <select class="form-control" name="ADULT">
+                                        <option value="ADULT"    {%if select == 1%} selected {%endif%}>ADULT</option>
+                                         <option value="1 ADULT" {%if select == 2%} selected {%endif%}>1 ADULT</option>
+                                          <option value="2 ADULT"{%if select == 3%} selected {%endif%}>2 ADULT</option>
+                                          <option value="3 ADULT"{%if select == 4%} selected {%endif%}>3 ADULT</option>
+                                         <option value="4 ADULT" {%if select == 5%} selected {%endif%}>4 ADULT</option>
+                                    </select>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">CHILDREN</label>
+                                   <select class="form-control" name="CHILDREN">
+                                         <option value="CHILDREN"   {%if select == 1%} selected {%endif%}>CHILDREN</option>
+                                         <option value="1 CHILDREN" {%if select == 2%} selected {%endif%}>1 CHILDREN</option>
+                                         <option value="2 CHILDREN" {%if select == 3%} selected {%endif%}>2 CHILDREN</option>
+                                         <option value="3 CHILDREN" {%if select == 4%} selected {%endif%}>3 CHILDREN</option>
+                                         <option value="4 CHILDREN" {%if select == 5%} selected {%endif%}>4 CHILDREN</option>
+                                   </select>
+                              </div>
+                               <div class="form-group edit_form">
+                                    <label class="form-label">Total Person</label>
+                                     <input type="text" name="Total_Person" class="form-control" value={{data.Total_Person}} required>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Gender</label>
+                                  <select class="form-control" name="Gender" value={{data.Gender}} >
+                                      <option value="Gender" {%if select == 1%} selected {%endif%} >Gender</option>
+                                      <option value="MALE"   {%if select == 2%} selected {%endif%}>MALE</option>
+                                      <option value="FEMALE" {%if select == 3%} selected {%endif%}>FEMALE</option>
+                                  </select>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Select Room</label>
+                                   <select class="form-control" name="Select_Room">
+                                         <option value="Select Room"  {%if select == 1%} selected {%endif%}>Select Room</option>
+                                         <option value="Delux"        {%if select == 2%} selected {%endif%}>Delux</option>
+                                         <option value="Super Delux"   {%if select == 3%} selected {%endif%}>Super Delux</option>
+                                         <option value="Single"         {%if select == 4%} selected {%endif%}>Single</option>
+                                         <option value="Double"         {%if select == 5%} selected {%endif%}>Double</option>
+                                   </select>
+                              </div>
+                               <div class="form-group edit_form">
+                                   <label class="form-label">Room Number</label>
+                                   <select class="form-control" name="Room_Number">
+                                         <option value="Room Number"  {%if select == 1%} selected {%endif%}>Room Number</option>
+                                         <option value="Room101"     {%if select == 2%} selected {%endif%}>Room101</option>
+                                         <option value="Room102"     {%if select == 3%} selected {%endif%} >Room102</option>
+                                         <option value="Room103"      {%if select == 4%} selected {%endif%}>Room103</option>
+                                         <option value="Room104"      {%if select == 5%} selected {%endif%}>Room104</option>
+                                   </select>
+                              </div>
+                              <div class="form-group edit_form">
+                                 <label class="form-label">Upload Image</label>
+                                <input type="file" name="Upload_Image" class="form-control" value={{data.Upload_Image}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Country</label>
+                                <input type="text"  name="Country" class="form-control" value={{data.Country}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Address</label>
+                                <input type="text"  name="Address" class="form-control" value={{data.Address}}>
+                              </div>
+                        </div>
+                        
+                    <div class="col-lg-12">
+                        <div class="edit_btn">
+                           <button type="submit">Update</button>
+                        </div>
+                        <div class="edit_btn">
+                            <button type="reset">Clear</button>
+                        </div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+     
+
+   {% endblock %}

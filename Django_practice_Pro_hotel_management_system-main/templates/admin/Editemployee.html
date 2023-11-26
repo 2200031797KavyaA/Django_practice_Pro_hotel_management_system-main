@@ -1,0 +1,126 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Edit employee page
+{% endblock %}
+  {% block  pagecontant %}
+         <!-- page content -->
+
+          <!--************************************
+			form part start
+		*************************************-->
+    {% load static %}
+   <link rel="stylesheet" href="{%static 'static_files/css/style.css'%}">
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Edit Employee</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'Addemployee' %}">Add Employees</a>
+                     </div>
+                 </div>
+            </div>
+            <div class="edit_stu_form" >
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {%csrf_token%}
+                       
+                        <div class="col-lg-12">
+                            <div class="form-group edit_form">
+                                <label class="form-label">Employee Id</label>
+                                <input type="text" name="Employee_Id" class="form-control" value={{data.Employee_Id}} readonly>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Personal Identity</label>
+                                <input type="text"  name="Personal_Identity" class="form-control" value={{data.Personal_Identity}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">First Name</label>
+                                <input type="text"  name="First_Name" class="form-control" value={{data.First_Name}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Last Name</label>
+                                <input type="text"  name="Last_Name" class="form-control" value={{data.Last_Name}}>
+                              </div>
+                             <div class="form-group edit_form">
+                                  <label class="form-label">Email</label>
+                                <input type="text"  name="Email" class="form-control" value={{data.Email}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Mobile Number</label>
+                                <input type="text"  name="Mobile_Number" class="form-control" value={{data.Mobile_Number}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Joining Date</label>
+                                <input type="text"  name="Joining_Date" class="form-control" value={{data.Joining_Date}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Date of Birth</label>
+                                <input type="text"  name="Dateof_Birth" class="form-control" value={{data.Dateof_Birth }}>
+                              </div>
+                               <div class="form-group edit_form">
+                                <label class="form-label">Departments</label>
+                                 <select class="form-control" name="Departments" required>
+                                    <option value="Departments"    {%if select == 1%} selected {%endif%}>Departments</option>
+                                     <option value="Housekeeping"  {%if select == 2%} selected {%endif%}>Housekeeping</option>
+                                     <option value="Kitchen"       {%if select == 3%} selected {%endif%}>Manager</option>
+                                     <option value="Security"      {%if select == 4%} selected {%endif%}>Chef</option>
+                                     <option value="Food and Beverage"  {%if select == 5%} selected {%endif%}>Food and Beverage</option>
+                                     <option value="Kitchen"  {%if select == 6%} selected {%endif%}>Kitchen</option>
+                                     <option value="Security"  {%if select == 7%} selected {%endif%}>Security</option>
+                                     <option value="transport" {%if select == 8%} selected {%endif%}>transport</option>
+                                 </select>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Gender</label>
+                                  <select class="form-control" name="Gender" value={{data.Gender}} >
+                                      <option value="Gender" {%if select == 1%} selected {%endif%}>Gender</option>
+                                      <option value="MALE"   {%if select == 2%} selected {%endif%}>MALE</option>
+                                      <option value="FEMALE" {%if select == 3%} selected {%endif%}>FEMALE</option>
+                                  </select>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Blood Group</label>
+                                <input type="text"  name="Blood_Group" class="form-control" value={{data.Blood_Group}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Education</label>
+                                <input type="text"  name="Education" class="form-control" value={{data.Education}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Guardian Name</label>
+                                <input type="text"  name="Guardian" class="form-control" value={{data.Guardian}}>
+                              </div>
+                               <div class="form-group edit_form">
+                                  <label class="form-label">Guardian Number</label>
+                                <input type="text"  name="Guardian_Number" class="form-control" value={{data.Guardian_Number}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                 <label class="form-label">Upload Image</label>
+                                <input type="file" name="Upload_Image" class="form-control" value={{data.Upload_Image}}>
+                              </div>
+                              <div class="form-group edit_form">
+                                  <label class="form-label">Address</label>
+                                <input type="text"  name="Address" class="form-control" value={{data.Address}}>
+                              </div>
+                        </div>
+                        
+                    <div class="col-lg-12">
+                        <div class="edit_btn">
+                           <button type="submit">Update</button>
+                        </div>
+                        <div class="edit_btn">
+                            <button type="reset">Clear</button>
+                        </div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+     
+
+   {% endblock %}

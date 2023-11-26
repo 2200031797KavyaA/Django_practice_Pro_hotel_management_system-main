@@ -1,0 +1,214 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ All Rooms page
+{% endblock %}
+  {% block  pagecontant %}
+  {% load static %}
+         <!-- page content -->
+      <!--************************************
+			Table part start
+		*************************************-->
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >All Rooms</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'Add_room' %}">Add Rooms</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+          <div class="row" style="margin-top:10px;">
+              <div class="col-lg-12">
+                  <div class="table_menu">
+                      <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="active"><a href="#List_View" role="tab" data-toggle="tab">List View</a></li>
+                          <li ><a href="#Grid_view" role="tab" data-toggle="tab">Grid view</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="List_View">
+                              <div class="col-lg-12">
+                                  <div class="table_tilte">
+                                      <h4>All Rooms list</h4>
+                                      <a href="{% url 'Add_room' %}"><i class="fas fa-plus"></i> Add New</a>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12">
+                                  <div class="table_info11">
+                                      <form action="All_Room" method="post" enctype="multipart/form-data">
+                                          {% csrf_token %}
+                                          <div class="form-group table_info_btn">
+                                               <label class="form-label">Show</label>
+                                               <select class="form-control">
+                                                   <option value="Class">15</option>
+                                                   <option value="html">25</option>
+                                                   <option value="css">50</option>
+                                                   <option value="javascript">75</option>
+                                                   <option value="angular">100</option>
+                                               </select>
+                                            </div>
+                                          <div class="form-group table_info_btn1" >
+                                               <select class="form-control" name="Room_Type">
+                                                     <option value="Select Room">Select Room</option>
+                                                     <option value=" Delux">Delux</option>
+                                                     <option value=" Super Delux">Super Delux</option>
+                                                     <option value=" Single">Single</option>
+                                                     <option value=" Double">Double</option>
+                                               </select>
+                                        </div>
+                                          <div class="table_info_btn2">
+                                             <div class="form-group">
+                                               <input type="search" name="search" class="form-control" placeholder="" required>
+                                           </div>
+                                         </div>
+                                        <div class="table_info_btn3">
+                                            <div class="form_btn2">
+                                               <button type="submit">Search</button>
+                                            </div>
+                                            <div class="form_btn2">
+                                              <button type="submit">Show All</button>
+                                           </div>
+                                         </div>
+                                      </form>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 form_table1" >
+                                      <div id="example" class="example table-wrapper-scroll-y my-custom-scrollbar">
+                                        <table  class="table-bordered table-striped">
+                                              <tr>
+                                                  <th>Room Number</th>
+                                                  <th>Room Type</th>
+                                                <th>Room Floor</th>
+                                                <th>Room Facility</th>
+                                                <th>Room Price</th>
+                                                <th>Room Image</th>
+                                                   <th>Date</th>
+                                                   <th>Time</th>
+                                                   <th>Action</th>
+                                               </tr>
+
+                                            {%if data %}
+
+                                        {% for i in data %}
+                                         <tr>
+                                              <td>{{i.Room_Number}}</td>
+                                              <td>{{i.Room_Type}}</td>
+                                              <td>{{i.Room_Floor}}</td>
+                                              <td>{{i.Room_Facility}}</td>
+                                              <td>{{i.Room_Price}}</td>
+                                              <td>{{i.Room_Image}}</td>
+                                              <td>{{i.Date}}</td>
+                                              <td>{{i.Time}}</td>
+                                              <td class="action">
+                                                       <a  href="{% url 'AllRooms_Delete' id=i.Id%}">Delete</a>
+                                                       <a  href="{% url 'EditRooms' id=i.Id%}">Update</a>
+                                              </td>
+                                        </tr>
+                                        {%endfor%}
+
+                                        {% endif %}
+                                        </table>
+                                    </div>
+                              </div>
+                          </div>
+                          <div class="tab-pane" id="Grid_view">
+                               <div class="col-lg-12">
+                                  <div class="table_info11">
+                                      <form method="post" action="All_Room">
+                                          {% csrf_token %}
+                                          <div class="form-group table_info_btn">
+                                               <label class="form-label">Show</label>
+                                               <select class="form-control" name="">
+                                                   <option value="Class">15</option>
+                                                   <option value="html">25</option>
+                                                   <option value="css">50</option>
+                                                   <option value="javascript">75</option>
+                                                   <option value="angular">100</option>
+                                               </select>
+                                            </div>
+                                          <div class="form-group table_info_btn1" >
+                                               <select class="form-control" name="Room_Type">
+                                                 <option value="Select Room">Select Room</option>
+                                                 <option value=" Delux">Delux</option>
+                                                 <option value=" Super Delux">Super Delux</option>
+                                                 <option value=" Single">Single</option>
+                                                 <option value=" Double">Double</option>
+                                               </select>
+                                        </div>
+                                          <div class="table_info_btn2">
+                                             <div class="form-group">
+                                               <input type="search" name="search" class="form-control" placeholder="" required>
+                                           </div>
+                                         </div>
+                                        <div class="table_info_btn3">
+                                            <div class="form_btn2">
+                                               <button type="submit">Search</button>
+                                            </div>
+                                            <div class="form_btn2">
+                                              <button type="submit">Show All</button>
+                                           </div>
+                                         </div>
+                                      </form>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 table-wrapper-scroll-y my-custom-scrollbar Grid_view_pic">
+                                    {%if data %}
+
+                                    {% for i in data %}
+                                     <div class="col-lg-4 Grid_view_pic_info" >
+                                          <div class="Grid_view_top">
+                                              <p> <span class="hover_icon"><i class="fas fa-ellipsis-h"></i></span>
+                                                <div class="del_Edit">
+                                                   <a href="{% url 'EditRooms' id=i.Id%}"><i class="fas fa-user-edit"></i></a>
+                                                   <a href="{% url 'AllRooms_Delete' id=i.Id%}"><i class="fas fa-trash-alt"></i></a>
+                                                </div>
+                                              </p>
+                                                {%if i.Room_Image %}
+                                               <img src="{{i.Room_Image.url}}" alt="img">
+                                               {% endif %}
+                                              <h4>{{i.Room_Type}}</h4>
+                                              <h6>{{i.Room_Number}}</h6>
+                                          </div>
+                                           <div class="Grid_view_botton">
+                                                    <div class="Grid_view_botton_info">
+                                                        <h5>Room Floor:</h5>
+                                                        <p>{{i.Room_Floor}}</p>
+                                                    </div>
+                                                      <div class="Grid_view_botton_info">
+                                                          <h5>Room Price:</h5>
+                                                          <p>{{i.Room_Price}}</p>
+                                                      </div>
+                                                      <div class="Grid_view_botton_info">
+                                                          <h5>Date:</h5>
+                                                          <p>{{i.Date}}</p>
+                                                      </div>
+                                                     <div class="Grid_view_botton_info">
+                                                         <h5>Room Facility:</h5>
+                                                         <p>{{i.Room_Facility}}</p>
+                                                     </div>
+                                           </div>
+                                  </div>
+                                      {%endfor%}
+
+                                  {% endif %}
+                                  <div class="col-lg-4">
+
+
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  {% endblock %}

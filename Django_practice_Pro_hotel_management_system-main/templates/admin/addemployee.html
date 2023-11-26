@@ -1,0 +1,250 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Add employee page
+{% endblock %}
+  {% block  pagecontant %}
+
+
+         <!-- page content -->
+      <!--************************************
+			form part start
+		*************************************-->
+
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Add Employees</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'Addemployee' %}">Add Employees</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+
+          <div class="row" style="margin-top:15px; ">
+          <div class="col-lg-6" style="background: blue; ">
+           <div class="col-lg-12">
+               <div class="form_title">
+                   <h1>Manage Employee</h1>
+               </div>
+           </div>
+              <form method="post" action="Addemployee" enctype="multipart/form-data">
+                 {% csrf_token %}
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Employee Id</label>
+                      <input type="text" name="Employee_Id" class="form-control" placeholder="Employee Id" required>
+                  </div>
+              </div>
+              <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">First Name</label>
+                      <input type="text" name="First_Name" class="form-control" placeholder="First Name" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" name="Last_Name" class="form-control" placeholder="Last Name" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Email</label>
+                      <input type="email" name="Email" class="form-control" placeholder="Email" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Mobile Number</label>
+                      <input type="text" name="Mobile_Number" class="form-control" placeholder="Mobile Number" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Joining Date</label>
+                      <input type="date" name="Joining_Date " class="form-control" placeholder="Joining Date" required>
+                  </div>
+              </div>
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Date of Birth</label>
+                      <input type="date" name="Dateof_Birth" class="form-control" placeholder="Date of Birth" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Departments</label>
+                      <select class="form-control" name="Departments" required>
+                          <option value="Departments">Departments</option>
+                          <option value="Housekeeping">Housekeeping</option>
+                           <option value="Kitchen">Manager</option>
+                            <option value="Security">Chef</option>
+                          <option value="Food and Beverage">Food and Beverage</option>
+                          <option value="Kitchen">Kitchen</option>
+                          <option value="Security">Security</option>
+                           <option value="Security">transport</option>
+                      </select>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Gender</label>
+                      <select class="form-control" name="Gender" required>
+                          <option value="Gender">Gender</option>
+                          <option value="MALE">MALE</option>
+                          <option value="FEMALE">FEMALE</option>
+                      </select>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Blood Group</label>
+                      <input type="text" name="Blood_Group" class="form-control" placeholder="Blood Group" required>
+                  </div>
+              </div>
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Education</label>
+                      <input type="text" name="Education" class="form-control" placeholder="Education" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Personal Identity</label>
+                      <input type="text" name="Personal_Identity" class="form-control" placeholder="NID/Birth certificate Number" required>
+                  </div>
+              </div>
+                   <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Guardian</label>
+                      <input type="text" name="Guardian" class="form-control" placeholder="Guardian Name" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Guardian Number</label>
+                      <input type="text" name="Guardian_Number" class="form-control" placeholder="Guardian Number" required>
+                  </div>
+              </div>
+                   <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Upload Image</label>
+                      <input type="file" name="Upload_Image" class="form-control" placeholder="" required>
+                  </div>
+              </div>
+              <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Address</label>
+                      <input type="text" name="Address" class="form-control" placeholder="Address" required>
+                  </div>
+              </div>
+              <div class="col-lg-12">
+                  <div class="form_btn">
+                      <button type="submit">Add</button>
+                  </div>
+                   <div class="form_btn">
+                      <button type="reset">Clear</button>
+                  </div>
+              </div>
+                  </form>
+          </div>
+              <div class="col-lg-6 form_right" style="background: blue;">
+                  <div class="col-lg-12">
+                      <div class="form_right_info">
+                          <form method="post" action="Add_Employee_Search" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <div class="from_info1">
+                                   <div class="form-group">
+                                       <select class="form-control" name="departments" required>
+                                            <option value="Departments">Departments</option>
+                                            <option value="Housekeeping">Housekeeping</option>
+                                            <option value="Kitchen">Manager</option>
+                                            <option value="Security">Chef</option>
+                                            <option value="Food and Beverage">Food and Beverage</option>
+                                            <option value="Kitchen">Kitchen</option>
+                                            <option value="Security">Security</option>
+                                            <option value="Security">transport</option>
+                                       </select>
+                                     </div>
+                                  </div>
+                              <div class="from_info2">
+                                   <div class="form-group">
+                                       <input type="search" name="serch" class="form-control" placeholder="" required>
+                                   </div>
+                              </div>
+                              <div class="from_info3">
+                                    <div class="form_btn1">
+                                         <button type="submit">Search</button>
+                                     </div>
+                              </div>
+                              <div class="from_info4">
+                                    <div class="form_btn1">
+                                         <button type="submit">Show All</button>
+                                     </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-lg-12  form_table">
+                      <div id="example" class="example  table-wrapper-scroll-y my-custom-scrollbar">
+                        <table  class="table-bordered table-striped">
+                          <tr>
+                              <th>Employee Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Mobile Number</th>
+                            <th>Joining Date</th>
+                              <th>Date of Birth</th>
+                            <th>Departments</th>
+                            <th>Gender</th>
+                            <th>Blood Group</th>
+                              <th>Education</th>
+                            <th>Personal Identity</th>
+                               <th>Guardian Name</th>
+                            <th>Guardian Number</th>
+                              <th>Upload Image</th>
+                               <th>Address</th>
+                              <th>Action</th>
+                          </tr>
+                              {%if data %}
+
+                                    {% for i in data %}
+                                     <tr>
+                                          <td>{{i.Employee_Id}}</td>
+                                          <td>{{i.First_Name}}</td>
+                                          <td>{{i.Last_Name}}</td>
+                                          <td>{{i.Email}}</td>
+                                          <td>{{i.Mobile_Number}}</td>
+                                          <td>{{i.Joining_Date }}</td>
+                                          <td>{{i.Dateof_Birth}}</td>
+                                          <td>{{i.Departments}}</td>
+                                          <td>{{i.Gender}}</td>
+                                          <td>{{i.Blood_Group}}</td>
+                                          <td>{{i.Education}}</td>
+                                          <td>{{i.Personal_Identity}}</td>
+                                          <td>{{i.Guardian}}</td>
+                                          <td>{{i.Guardian_Number}}</td>
+                                          <td>{{i.Upload_Image}}</td>
+                                          <td>{{i.Address}}</td>
+                                          <td class="action">
+                                                   <a  href="{% url 'AddEmplopage_Delete' id=i.Employee_Id%}">Delete</a>
+                                                   <a  href="{% url 'Editemployee' id=i.Employee_Id%}">Update</a>
+                                          </td>
+                                     </tr>
+                             {%endfor%}
+                                  {% endif %}
+                        </table>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+ {% endblock %}

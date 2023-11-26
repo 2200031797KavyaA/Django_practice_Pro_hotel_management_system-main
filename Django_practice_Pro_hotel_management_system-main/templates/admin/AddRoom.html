@@ -1,0 +1,182 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Add Customer page
+{% endblock %}
+  {% block  pagecontant %}
+
+
+         <!-- page content -->
+      <!--************************************
+			form part start
+		*************************************-->
+
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Add Rooms</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'Add_room' %}">Add Rooms</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+
+          <div class="row" style="margin-top:15px; ">
+          <div class="col-lg-6" style="background: blue; ">
+           <div class="col-lg-12">
+               <div class="form_title">
+                   <h1>Manage Rooms</h1>
+               </div>
+           </div>
+              <form method="post" action="Add_room" enctype="multipart/form-data">
+                 {% csrf_token %}
+
+                        <div class="col-lg-12">
+                      <div class="form-group from_info">
+                          <label class="form-label">Room Number</label>
+                               <select class="form-control" name="Room_Number">
+                                     <option value="Room Number">Room Number</option>
+                                     <option value=" Room101">Room101</option>
+                                     <option value=" Room102">Room102</option>
+                                     <option value="Room103">Room103</option>
+                                     <option value="Room104">Room104</option>
+                               </select>
+                      </div>
+                  </div>
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Room Type</label>
+                           <select class="form-control" name="Room_Type">
+                                 <option value="Select Room">Select Room</option>
+                                 <option value=" Delux">Delux</option>
+                                 <option value=" Super Delux">Super Delux</option>
+                                 <option value=" Single">Single</option>
+                                 <option value=" Double">Double</option>
+                           </select>
+                  </div>
+              </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Room Floor</label>
+                      <select class="form-control" name="Room_Floor" required>
+                          <option value="Room Floor">Room Floor</option>
+                          <option value="Floor_G">Floor_G</option>
+                          <option value="Floor_First">Floor_First</option>
+                           <option value="Floor_Second">Floor_Second</option>
+                           <option value="Floor_Thirt">Floor_Thirt</option>
+                      </select>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Room Facility</label>
+                      <input type="text" name="Room_Facility" class="form-control" placeholder="Room Facility" required>
+                  </div>
+              </div>
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Room Price</label>
+                      <input type="text" name="Room_Price" class="form-control" placeholder="Room Price" required>
+                  </div>
+              </div>
+                   <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Room Image</label>
+                      <input type="file" name="Room_Image" class="form-control" placeholder="" required>
+                  </div>
+              </div>
+
+              <div class="col-lg-12">
+                  <div class="form_btn">
+                      <button type="submit">Add</button>
+                  </div>
+                   <div class="form_btn">
+                      <button type="reset">Clear</button>
+                  </div>
+              </div>
+                  </form>
+          </div>
+              <div class="col-lg-6 form_right" style="background: blue;">
+                  <div class="col-lg-12">
+                      <div class="form_right_info">
+                          <form method="post" action="Add_Room_Search" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <div class="from_info1">
+                                   <div class="form-group">
+                                       <select class="form-control" name="Room_Type">
+                                             <option value="Select Room">Select Room</option>
+                                             <option value=" Delux">Delux</option>
+                                             <option value=" Super Delux">Super Delux</option>
+                                             <option value=" Single">Single</option>
+                                             <option value=" Double">Double</option>
+                                        </select>
+                                     </div>
+                                  </div>
+                              <div class="from_info2">
+                                   <div class="form-group">
+                                       <input type="search" name="serch" class="form-control" placeholder="" required>
+                                   </div>
+                              </div>
+                              <div class="from_info3">
+                                    <div class="form_btn1">
+                                         <button type="submit">Search</button>
+                                     </div>
+                              </div>
+                              <div class="from_info4">
+                                    <div class="form_btn1">
+                                         <button type="submit">Show All</button>
+                                     </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-lg-12  form_table">
+                      <div id="example" class="example  table-wrapper-scroll-y my-custom-scrollbar">
+                        <table  class="table-bordered table-striped">
+                          <tr>
+                              <th>Room Number</th>
+                              <th>Room Type</th>
+                            <th>Room Floor</th>
+                            <th>Room Facility</th>
+                            <th>Room Price</th>
+                            <th>Room Image</th>
+                               <th>Date</th>
+                               <th>Time</th>
+                               <th>Action</th>
+                          </tr>
+                             {%if data %}
+
+                                    {% for i in data %}
+
+                                     <tr>
+                                          <td>{{i.Room_Number}}</td>
+                                          <td>{{i.Room_Type}}</td>
+                                          <td>{{i.Room_Floor}}</td>
+                                          <td>{{i.Room_Facility}}</td>
+                                          <td>{{i.Room_Price}}</td>
+                                          <td>{{i.Room_Image}}</td>
+                                          <td>{{i.Date}}</td>
+                                          <td>{{i.Time}}</td>
+                                          <td class="action">
+                                                   <a  href="{% url 'AddRooms_Delete' id=i.Id%}">Delete</a>
+                                                   <a  href="{% url 'EditRooms' id=i.Id%}">Update</a>
+                                          </td>
+                                     </tr>
+                             {%endfor%}
+
+                                  {% endif %}
+
+                        </table>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+ {% endblock %}

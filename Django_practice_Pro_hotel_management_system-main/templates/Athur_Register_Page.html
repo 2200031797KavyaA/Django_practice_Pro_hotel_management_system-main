@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Author Register Page</title>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;
+                 600;700;800&display=swap"
+    rel="stylesheet"
+  />
+   {% load static %}
+   <!-- Bootstrap Css -->
+  <link rel="stylesheet" href="{%static 'Allfiles/Css/bootstrap.min.css'%}">
+  <!-- Fontawesome Css -->
+   <link rel="stylesheet" href="{%static 'Allfiles/Css/fontawesome.min.css'%}">
+
+  <!-- all plugin Css-->
+
+   <!-- Style  Css -->
+     <link rel="stylesheet" href="{%static 'Allfiles/Css/Style.css'%}">
+  <!-- Responsive  Css -->
+  <link rel="stylesheet" href="{%static 'Allfiles/Css/Responsive.css'%}">
+</head>
+  <!--************************************
+			register part start
+		*************************************-->
+      <section id="slide">
+        <div class="login_bg1" style="background: url({%static 'Allfiles/photo/slider-2.jpg'%})">
+          <div class="container">
+            <div class="row">
+              <div class="home-link text-center">
+                <p>
+                  <a href="{% url 'Home' %}">Home</a><i class="fas fa-angle-right"></i><a href="Athur_Register_Page.html">Register</a>
+                </p>
+              </div>
+              <div class="login_info">
+                <div class="col-lg-10">
+                  <div class="login_txt1">
+                    <h2>Lucia <span> Hotel & Resort </span></h2>
+                    <h4>Register Here</h4>
+                  </div>
+                </div>
+                <form method="post" action="">
+                    {% csrf_token %}
+                  <div class="from_info">
+                    <div class="col-lg-10">
+                      <div class="form-group">
+                        <input type="text" name="Fname" class="form-control"  placeholder="First Name *" required/>
+                      </div>
+                      <div class="form-group">
+                        <input type="text"  name="Lname" class="form-control" placeholder="Last Name *" required/>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="Email" class="form-control" placeholder="Email *" required/>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="Phone_Number" placeholder="Phone Number *" required />
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="Password" class="form-control" placeholder="Password *" required />
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="Con_password" class="form-control" placeholder="Confirm Password *" required />
+                      </div>
+                    </div>
+                    <div class="col-lg-10">
+                      <div class="checkbox2">
+                        <input type="checkbox" name="check" required/><label for="">I Agree The Terms & Condition</label>
+                      </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <div  class="Register_btn" >
+                                <button type="submit">Register Now</button>
+                            </div>
+                            <div class="login_btn1">
+                                <a href="{% url 'Aothur_login' %}">Login Now</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--************************************
+			register part End
+		*************************************-->
+
+   <!--bootstrap js-->
+     <script src="{%static 'Allfiles/Js/bootstrap.bundle.min.js'%}"></script>
+  <!--jquary js-->
+     <script src="{%static 'Allfiles/Js/jquery-1.12.4.min.js'%}"></script>
+  <!--all plugin js-->
+  <!--main js-->
+   <script src="{%static 'Allfiles/Js/Script.js'%}"></script>
+</body>

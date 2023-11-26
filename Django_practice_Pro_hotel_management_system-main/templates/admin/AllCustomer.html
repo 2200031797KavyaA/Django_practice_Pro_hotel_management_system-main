@@ -1,0 +1,247 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ All Customers page
+{% endblock %}
+  {% block  pagecontant %}
+  {% load static %}
+         <!-- page content -->
+      <!--************************************
+			Table part start
+		*************************************-->
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >All Customers</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'AddCustomer' %}">Add Customers</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+          <div class="row" style="margin-top:10px;">
+              <div class="col-lg-12">
+                  <div class="table_menu">
+                      <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="active"><a href="#List_View" role="tab" data-toggle="tab">List View</a></li>
+                          <li ><a href="#Grid_view" role="tab" data-toggle="tab">Grid view</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="List_View">
+                              <div class="col-lg-12">
+                                  <div class="table_tilte">
+                                      <h4>All Customers list</h4>
+                                      <a href="{% url 'AddCustomer' %}"><i class="fas fa-plus"></i> Add New</a>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12">
+                                  <div class="table_info11">
+                                      <form action="" method="post" enctype="multipart/form-data">
+                                          {% csrf_token %}
+                                          <div class="form-group table_info_btn">
+                                               <label class="form-label">Show</label>
+                                               <select class="form-control">
+                                                   <option value="Class">15</option>
+                                                   <option value="html">25</option>
+                                                   <option value="css">50</option>
+                                                   <option value="javascript">75</option>
+                                                   <option value="angular">100</option>
+                                               </select>
+                                            </div>
+                                          <div class="form-group table_info_btn1" >
+                                                <select class="form-control" name="departments" required>
+                                                    <option value="Country">Country</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="Uk">Uk</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Dubai">Dubai</option>
+                                                    <option value="India">India</option>
+                                                    <option value="Argentina">Argentina</option>
+                                                    <option value="Canada">Canada</option>
+                                               </select>
+                                        </div>
+                                          <div class="table_info_btn2">
+                                             <div class="form-group">
+                                               <input type="search" name="search" class="form-control" placeholder="" required>
+                                           </div>
+                                         </div>
+                                        <div class="table_info_btn3">
+                                            <div class="form_btn2">
+                                               <button type="submit">Search</button>
+                                            </div>
+                                            <div class="form_btn2">
+                                              <button type="submit">Show All</button>
+                                           </div>
+                                         </div>
+                                      </form>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 form_table1" >
+                                      <div id="example" class="example table-wrapper-scroll-y my-custom-scrollbar">
+                                        <table  class="table-bordered table-striped">
+                                              <tr>
+                                                  <th>Customer Id</th>
+                                                  <th>Check In</th>
+                                                <th>Check Out</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile Number</th>
+                                                <th>ADULT</th>
+                                                  <th>CHILDREN</th>
+                                                    <th>Total Person</th>
+                                                <th>Select Room</th>
+                                                <th>Room Number</th>
+                                                <th>Gender</th>
+                                                  <th>Personal Identity</th>
+                                                   <th>Upload Image</th>
+                                                <th>Country</th>
+                                                  <th>Address</th>
+                                                  <th>Action</th>
+
+                                              </tr>
+
+                                            {%if data %}
+
+                                        {% for i in data %}
+                                           <tr>
+                                          <td>{{i.Customer_Id}}</td>
+                                          <td>{{i.Check_in}}</td>
+                                          <td>{{i.Check_out}}</td>
+                                          <td>{{i.First_Name}}</td>
+                                          <td>{{i.Last_Name}}</td>
+                                          <td>{{i.Email}}</td>
+                                          <td>{{i.Mobile_Number}}</td>
+                                          <td>{{i.ADULT}}</td>
+                                          <td>{{i.CHILDREN}}</td>
+                                          <td>{{i.Total_Person}}</td>
+                                          <td>{{i.Select_Room}}</td>
+                                          <td>{{i.Room_Number}}</td>
+                                          <td>{{i.Gender}}</td>
+                                          <td>{{i.Personal_Identity}}</td>
+                                          <td>{{i.Upload_Image}}</td>
+                                          <td>{{i.Country}}</td>
+                                           <td>{{i.Address}}</td>
+                                          <td class="action">
+                                                   <a  href="{% url 'AllCustpage_Delete' id=i.Customer_Id%}">Delete</a>
+                                                   <a  href="{% url 'EditCustomer' id=i.Customer_Id%}">Update</a>
+                                          </td>
+                                       </tr>
+                                        {%endfor%}
+
+                                        {% endif %}
+                                        </table>
+                                    </div>
+                              </div>
+                          </div>
+                          <div class="tab-pane" id="Grid_view">
+                               <div class="col-lg-12">
+                                  <div class="table_info11">
+                                      <form method="post" action="">
+                                          {% csrf_token %}
+                                          <div class="form-group table_info_btn">
+                                               <label class="form-label">Show</label>
+                                               <select class="form-control" name="">
+                                                   <option value="Class">15</option>
+                                                   <option value="html">25</option>
+                                                   <option value="css">50</option>
+                                                   <option value="javascript">75</option>
+                                                   <option value="angular">100</option>
+                                               </select>
+                                            </div>
+                                          <div class="form-group table_info_btn1" >
+                                               <select class="form-control" name="departments" required>
+                                                    <option value="Country">Country</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="Uk">Uk</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Dubai">Dubai</option>
+                                                    <option value="India">India</option>
+                                                    <option value="Argentina">Argentina</option>
+                                                    <option value="Canada">Canada</option>
+                                               </select>
+                                        </div>
+                                          <div class="table_info_btn2">
+                                             <div class="form-group">
+                                               <input type="search" name="search" class="form-control" placeholder="" required>
+                                           </div>
+                                         </div>
+                                        <div class="table_info_btn3">
+                                            <div class="form_btn2">
+                                               <button type="submit">Search</button>
+                                            </div>
+                                            <div class="form_btn2">
+                                              <button type="submit">Show All</button>
+                                           </div>
+                                         </div>
+                                      </form>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12 table-wrapper-scroll-y my-custom-scrollbar Grid_view_pic">
+                                    {%if data %}
+
+                                    {% for i in data %}
+                                     <div class="col-lg-4 Grid_view_pic_info" >
+                                          <div class="Grid_view_top">
+                                              <p> <span class="hover_icon"><i class="fas fa-ellipsis-h"></i></span>
+                                                <div class="del_Edit">
+                                                   <a href="{% url 'EditCustomer' id=i.Customer_Id%}"><i class="fas fa-user-edit"></i></a>
+                                                   <a href="{% url 'AllCustpage_Delete' id=i.Customer_Id%}"><i class="fas fa-trash-alt"></i></a>
+                                                </div>
+                                              </p>
+                                                {%if i.Upload_Image %}
+                                               <img src="{{i.Upload_Image.url}}" alt="img">
+                                               {% endif %}
+                                              <h4>{{i.First_Name}} {{i.Last_Name}}</h4>
+                                              <h6>{{i.Mobile_Number}}</h6>
+                                          </div>
+                                           <div class="Grid_view_botton">
+                                                    <div class="Grid_view_botton_info">
+                                                        <h5>Check in:</h5>
+                                                        <p>{{i.Check_in}}</p>
+                                                    </div>
+                                                      <div class="Grid_view_botton_info">
+                                                          <h5>Check out:</h5>
+                                                          <p>{{i.Check_out}}</p>
+                                                      </div>
+                                                      <div class="Grid_view_botton_info">
+                                                          <h5 >Email:</h5>
+                                                          <p>{{i.Email}}</p>
+                                                      </div>
+                                                       <div class="Grid_view_botton_info">
+                                                           <h5>Total Person:</h5>
+                                                           <p>{{i.Total_Person}}</p>
+                                                       </div>
+                                                       <div class="Grid_view_botton_info">
+                                                           <h5>Select Room :</h5>
+                                                           <p>{{i.Select_Room }}</p>
+                                                       </div>
+                                                     <div class="Grid_view_botton_info">
+                                                         <h5>Room Number:</h5>
+                                                         <p>{{i.Room_Number}}</p>
+                                                     </div>
+                                           </div>
+                                  </div>
+                                      {%endfor%}
+
+                                  {% endif %}
+                                  <div class="col-lg-4">
+                                  
+
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  {% endblock %}

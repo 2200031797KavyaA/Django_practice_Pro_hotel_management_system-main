@@ -1,0 +1,1920 @@
+/*-----------------------------------------------------------------------------------
+    
+    Template Name: Hotel and Resort
+    Template URI: 
+    Description: This is html5 template
+    Author: Md.Minhajur Rahman
+    Author URI: 
+    Author Email:
+    Version: 1.0
+    
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    1.Header Part
+    2. 
+    3. 
+    4. 
+    5. 
+    6. 
+    7. 
+    8. 
+    9. 
+    10. 
+    11. 
+    12. 
+    
+
+-----------------------------------------------------------------------------------*/
+/*************************
+    General
+*************************/
+:root{
+    --titlecolor:#000;
+    --imgbg:#323232;
+     --bdcolor:#dedede;
+    --textcolor:#5d5d5d;
+    --maincolor:#fff;
+    --bgcolor:#f5f5f5;
+    --btnbgcolor:#000;
+    --hovercolor: #ffbf00;
+}
+
+*{ margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,ol,ul{
+  margin:0px;
+  padding:0px;
+}
+a{
+    text-decoration:none;
+}
+a:focus,
+button:focus {
+    text-decoration: none;
+    outline: none;
+	display:inline-block;
+}
+ul,ol{
+  list-style-type:none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+h2 {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color:var(--titlecolor);
+    line-height: 70px;
+    text-transform:uppercase;
+}
+ p{
+  font-size: 15px;
+  color:var(--textcolor);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  line-height: 26px;
+ }
+
+/*************************
+   Header Part start
+*************************/
+/*HEADER-TOP*/
+.header_top{
+    line-height: 40px;
+    z-index:99;
+}
+.header_top_left ul li{
+    float:left;
+    margin-right:15px;
+}
+.header_top_left ul li span i{
+    margin-right:5px;
+}
+.header_top_left ul li span{
+    font-size: 12px;
+    font-weight: 400;
+    color:var(--maincolor);
+}
+.header_top_right ul{
+    float:right;
+}
+.header_top_right ul li{
+    display:inline-block;
+    margin-left:30px;  
+}
+.header_top_right ul li:last-child a{
+    color:var(--maincolor);
+    padding: 0px 14px;
+    font-size:16px;
+    margin:5px 0px;
+    display: block;
+    background:var(--textcolor);
+    cursor: pointer;
+     transition: all linear 0.5s;
+     -webkit-transition: all linear 0.9s;
+     -moz-transition: all linear 0.9s;
+     -ms-transition: all linear 0.9s;
+     -o-transition: all linear 0.9s;
+}
+.header_top_right ul li:last-child a:hover{
+    background:var(--hovercolor);
+}
+.header_top_right ul li a i{
+    font-size:17px;
+    cursor:pointer;
+    color:var(--maincolor);
+    transition: all linear 0.5s;
+   -webkit-transition: all linear 0.5s;
+   -moz-transition: all linear 0.5s;
+   -ms-transition: all linear 0.5s;
+   -o-transition: all linear 0.5s;
+}
+.header_top_right ul li a i:hover{
+    color:var(--hovercolor);
+    transform: scale(1.2);
+    z-index:99;
+}
+/*HEADER-Menu*/
+.menu{
+    position: relative;
+    height:80px;
+    z-index:99;
+    background:rgba(0, 0, 0, 0.22);
+}
+.menu_logo{
+    margin-top:10px;
+	
+}
+
+.menu_logo h1{
+  font-size: 36px;
+  font-style:italic;
+  margin-bottom:-10px;
+  display: block;
+  color:var(--maincolor);
+  font-family: 'Montserrat',
+  sans-serif;
+}
+.menu_logo span{
+     font-size: 11px;
+     font-weight: 500;
+     font-family: 'Montserrat',
+     sans-serif;
+     margin-top:-5px;
+     color:var(--hovercolor);
+     margin-left:15px;
+}
+#Mynav{
+    margin-left:70px;
+}
+#Mynav ul li{
+  margin-right: 20px;
+  position: relative;
+  cursor:pointer;
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+ 
+}
+#Mynav ul li a{
+       font-weight: 600;
+       font-size: 14px;
+       display: block;
+       color:var(--maincolor);
+       font-family: 'Montserrat',
+       sans-serif;
+       padding:0px;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       cursor:pointer;
+       transition: all linear 0.5s;
+       -webkit-transition: all linear 0.5s;
+       -moz-transition: all linear 0.5s;
+        -ms-transition: all linear 0.5s;
+       -o-transition: all linear 0.5s;
+ }
+#Mynav ul li a:hover{
+    color:var(--hovercolor);
+}
+#Mynav ul li a i{
+    margin-left:5px;
+}
+#Mynav li ul{
+   padding:0px;
+   opacity:0;
+   position:absolute;
+   overflow: hidden;
+   background:var(--maincolor);
+    width:200px;
+     transition: all linear 0.5s;
+     -webkit-transition: all linear 0.5s;
+     -moz-transition: all linear 0.5s;
+     -ms-transition: all linear 0.5s;
+     -o-transition: all linear 0.5s;
+}
+#Mynav ul li:hover ul{
+   opacity:1;
+   margin-top: 30px;
+}
+#Mynav li ul li{
+    padding-left: 10px;
+    margin: 10px 0px; 
+}
+#Mynav li ul li a{
+      color:var(--titlecolor) !important;
+      cursor:pointer;
+      transition: all linear 0.5s;
+      -webkit-transition: all linear 0.5s;
+      -moz-transition: all linear 0.5s;
+      -ms-transition: all linear 0.5s;
+      -o-transition: all linear 0.5s;
+}
+#Mynav li ul li a:hover {
+    color: var(--hovercolor) !important;
+}
+.Booking_button{
+   margin-left:-170px;
+   position: relative;
+   display: inline-block;
+   text-align:center;
+   cursor: pointer;
+   background:var(--hovercolor);
+   border:2px solid var(--hovercolor);
+   padding:10px 15px;
+   transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
+.Booking_button a{
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    text-transform:uppercase;
+    color:var(--maincolor);
+}
+.Booking_button span {
+    cursor: pointer;
+     font-size:17px;
+    display: inline-block;
+    position: relative;
+    opacity:0;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    }
+.Booking_button:hover span {
+    padding-left:10px;
+    opacity:1;
+}
+
+/*************************
+  Slider Part start
+*************************/
+#slider{
+     margin-top:-167px;
+     z-index:1; 
+     transition: all linear 0.9s;
+     -webkit-transition: all linear 0.9s;
+     -moz-transition: all linear 0.9s;
+     -ms-transition: all linear 0.9s;
+     -o-transition: all linear 0.9s;
+}
+.slider_pic{
+    height:700px;
+    background: rgba(0, 0, 0, 0.8);
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+}
+.slide_text{
+    padding-top: 300px;
+}
+.slide_text h1{
+   color:var(--maincolor);
+   font-size:60px;
+   font-weight:700;
+   text-transform:uppercase;
+   font-family: 'Montserrat',
+    sans-serif;
+    padding-bottom:5px;
+}
+.slide_text h2{
+    color: var(--maincolor);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Montserrat',
+        sans-serif;
+    padding-bottom: 5px;
+}
+.slide_text h4{
+    color: var(--hovercolor);
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Montserrat',
+        sans-serif;
+   
+}
+.slide_text h4 i{
+    font-size:15px;
+    color:var(--hovercolor);
+}
+
+.slide_text p{
+    color:var(--maincolor);
+    text-align: center;
+}
+.slider-btn{
+    margin-top:20px;
+    position: relative;
+    display: inline-block;
+    text-align:center;
+    cursor: pointer;
+    z-index:999;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding: 6px 0px 5px 0px;
+    border:1px solid var(--maincolor);
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+.slider-btn:before{
+    position: absolute;
+    content: '';
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    transform:scaleX(0);
+    background: var(--hovercolor);
+     transition: all linear 0.9s;
+     -webkit-transition: all linear 0.9s;
+     -moz-transition: all linear 0.9s;
+     -ms-transition: all linear 0.9s;
+     -o-transition: all linear 0.9s;
+}
+.slider-btn:hover:before{
+   transform:scaleX(1);
+}
+.slider-btn a{
+      display: inline-block;
+      font-size:18px;
+      font-weight:700;
+      font-family: 'Montserrat',
+       sans-serif;
+      text-transform:uppercase;
+      color:var(--maincolor);
+}
+
+.pre_btn {
+    cursor: pointer;
+    top:0px;
+    left:50px;
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    opacity:0;
+    border: 1px solid var(--maincolor);
+    border-radius: 100%;
+    z-index:99;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+#slider:hover .pre_btn {
+     opacity:1;
+     top: 300px;
+     display:block;
+}
+ .pre_btn i {
+    color: var(--maincolor);
+    padding: 9px 15px;
+    font-size: 30px;
+    text-align: center; 
+}
+
+ .pre_btn:hover,
+ .pre_btn:hover i {
+    border-color: var(--hovercolor);
+    color: var(--hovercolor);
+}
+
+.next_btn{
+    cursor: pointer;
+    top: 0px;
+    position:absolute;
+    opacity:0;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    float: right;
+    border: 1px solid var(--maincolor);
+    border-radius: 50%;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+#slider:hover .next_btn {
+    opacity:1;
+    top: 300px;
+    display: block;
+}
+.next_btn i {
+    color: var(--maincolor);
+    padding: 9px 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.next_btn:hover,
+.next_btn:hover i {
+    border-color: var(--hovercolor);
+    color: var(--hovercolor);
+} 
+/*************************
+ Book A Table Area
+*************************/
+#Book_Table{
+    margin-top:10px;
+}
+.Book_info{
+    cursor: pointer;
+    background: var(--bgcolor);
+    padding: 19px 32px 10px 32px;
+    margin-top: -50px !important;
+    z-index: 20;
+    position: relative;
+    height: 80px;
+}
+ .Table_item{
+    cursor: pointer;
+    width: 18%;
+    float: left;
+    margin: 0px 10px; 
+    border:1px solid var(--bdcolor); 
+ }
+.Table_item input{
+       width: 85%;
+        border: none;
+        text-align:center;
+        height: 40px;
+        font-size: 15px;
+        font-family: "Montserrat",
+        sans-serif;
+        color:var(--textcolor);
+        text-transform: uppercase;
+}
+.Table_item input:focus{
+    outline: 0;
+}
+.Table_item i {
+    font-size:20px;
+}
+.Table_item select {
+    border:none;
+     width: 100%;
+     border: none;
+     text-align: center;
+     height: 40px;
+     font-size: 15px;
+     font-family: "Montserrat",
+     sans-serif;
+     color:var(--textcolor);
+      text-transform: uppercase;     
+}
+.Table_item select:focus {
+    outline:0;
+}
+.book_btn{
+     position: relative;
+     display: inline-block;
+     text-align:center;
+     cursor: pointer;
+     width:100%;
+     height:40px;
+     padding:8px 0px;
+     transition: all linear 0.5s;
+     -webkit-transition: all linear 0.5s;
+     -moz-transition: all linear 0.5s;
+     -ms-transition: all linear 0.5s;
+     -o-transition: all linear 0.5s;
+}
+.Table_item:last-child{
+    border:2px solid var(--hovercolor);
+    overflow: hidden;
+}
+.book_btn:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scaleX(1);
+    background: var(--hovercolor);
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+.book_btn:hover:before {
+    transform: scaleX(0); 
+}
+
+.book_btn a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat',
+        sans-serif;
+    text-transform: uppercase;
+    color: var(--maincolor);
+}
+.book_btn:hover a{
+    color:var(--hovercolor);
+}
+
+
+.xdsoft_datetimepicker.xdsoft_dark{
+     margin-top:-270px;
+}
+/*************************
+  About Part start
+*************************/
+#about {
+    margin-top: 80px;
+    position: relative;
+}
+.About_info{
+    margin-top:-13px;
+}
+.About_info h2{
+      width:270px;
+      border-bottom:2px solid var(--hovercolor);
+      margin-bottom:40px;
+}
+.About_info p {
+    margin-top:10px;
+}
+
+.about_btn{
+     margin-top:40px;
+     position: relative;
+     display: block;
+     text-align:center;
+     cursor: pointer;
+     overflow: hidden;
+     padding: 6px 0px 5px 0px;
+     width: 150px;
+     height: 40px;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+.about_btn:before{
+    position:absolute;
+    content:'';
+    z-index:-1;
+    left:0;
+    top:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+   transform: scaleY(1);
+   background: var(--hovercolor);
+   transition: all linear 0.9s;
+   -webkit-transition: all linear 0.9s;
+   -moz-transition: all linear 0.9s;
+   -ms-transition: all linear 0.9s;
+   -o-transition: all linear 0.9s;
+}
+.about_btn:hover:before{
+     transform: scaleY(0);
+     height:0;
+     overflow: hidden;
+}
+.about_btn a{
+      font-size:18px;
+      font-weight:400;
+      font-family: 'Montserrat',
+      sans-serif;
+      cursor: pointer;
+      text-transform:uppercase;
+      color:var(--titlecolor);
+       transition: all linear 0.9s;
+       -webkit-transition: all linear 0.9s;
+       -moz-transition: all linear 0.9s;
+       -ms-transition: all linear 0.9s;
+       -o-transition: all linear 0.9s;
+}
+.about_btn:hover a{
+     color:var(--hovercolor); 
+     font-weight:700;
+}
+.about_btn:hover{
+  background:var(--btnbgcolor);
+}
+.about_video{
+    position: relative;
+    cursor: pointer;
+     transition: all linear 0.9s;
+     -webkit-transition: all linear 0.9s;
+     -moz-transition: all linear 0.9s;
+     -ms-transition: all linear 0.9s;
+     -o-transition: all linear 0.9s;
+}
+.video_btn{
+    position:absolute;
+    top:42%;
+    left:42%;
+    text-align: center;
+}
+.video_btn i{
+   font-size:60px;
+   color:var(--maincolor);
+   position: absolute;
+   cursor: pointer;
+    opacity:0;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+#about:hover .video_btn i {
+    opacity:1;
+}
+.video_btn i:hover{
+    color:var(--hovercolor);
+}
+.modal-video-movie-wrap{
+    transform: translate(0%, 10%)
+}
+/*************************
+ EXPLOR OUR ROOMS
+*************************/
+#OUR_ROOMS{
+  margin-top:80px; 
+  background:var(--bgcolor); 
+}
+
+.ROOMS_Title h2 {
+    width: 520px;
+    border-bottom: 2px solid var(--hovercolor);
+    margin-left: 110px
+}
+.ROOMS_Title p{
+    margin-top:20px;
+}
+.ROOMS_info{
+    margin-top:40px;  
+    overflow: hidden; 
+}
+
+.rooms-view{
+    border-left: 1px solid rgba(221, 221, 221, 1);
+    border-right: 1px solid rgba(221, 221, 221, 1);
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    margin:0px 10px;
+    cursor: pointer;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+.rooms-view:hover{
+       border-left: 2px solid rgba(221, 221, 221, 1);
+       border-right: 2px solid rgba(221, 221, 221, 1);
+       border-bottom: 2px solid rgba(221, 221, 221, 1);
+       
+      }
+.ROOMS_pic{
+    cursor: pointer;
+    position: relative;
+}
+.ROOMS_pic img{
+  height:300px ;
+  width:100%;
+}
+.ROOMS_pic:before{
+     content: "";
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     right:0px;
+     width: 100%;
+     opacity: 1;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.2);
+}
+.btn{
+    position: absolute;
+    top:80%;
+    left:28%;
+}
+.room_btn{
+  position: relative;
+  display: block;
+  padding: 6px 0px 5px 0px;
+  text-align:center;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  z-index: 99;
+  transition: all linear 0.9s;
+  -webkit-transition: all linear 0.9s;
+  -moz-transition: all linear 0.9s;
+  -ms-transition: all linear 0.9s;
+  -o-transition: all linear 0.9s;
+}
+.room_btn:after{
+   content: "";
+   position: absolute;
+    z-index:-1;
+    left:10px;
+    top:0;
+    left:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    transform: scaleY(1);
+    background: var(--hovercolor);
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+.room_btn:hover:after{
+    transform: scaleY(0);
+    height: 0;
+}
+
+.room_btn a {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat',
+        sans-serif;
+    cursor: pointer;
+    display: block;
+    text-transform: uppercase;
+    color: var(--titlecolor);
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+
+.room_btn:hover a {
+    color: var(--hovercolor);
+    font-weight: 700;
+    display: block;
+}
+
+.room_btn:hover {
+    background: var(--btnbgcolor);
+}
+.ROOMS_text{
+    margin-top:20px;
+    opacity:1;
+    }
+.ROOMS_text h3 {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Montserrat',
+  sans-serif;
+  color:var(--titlecolor); 
+}
+.ROOMS_text span{
+    font-size: 25px;
+    font-weight: 600;
+    color:var(--hovercolor);
+}
+.ROOMS_text span i{
+    margin-right: 5px;
+}
+.ROOMS_text p{
+    margin:5px 15px 10px 15px;
+}
+.ROOMS_text i{
+       margin-bottom:10px;
+       color:var(--hovercolor);
+}
+ 
+.ROOMS_info .slick-dots {
+     margin-left:500px;
+      margin-top:15px;  
+}
+.ROOMS_info .slick-dots li {
+      width: 20px;
+      height: 20px;
+      margin: 0px 10px;
+      background: var(--bgcolor);
+      display: inline-block;
+  }
+ .ROOMS_info .slick-dots li button {
+       width: 17px;
+       border: 1px solid var(--textcolor);
+       height: 17px;
+       border-radius:50%;
+       color: transparent; 
+  }
+ .room_slide .slick-dots .slick-active button {
+     background: var(--hovercolor);
+  }
+/*************************
+OUR AWESOME SERVICES
+*************************/
+#Service{
+    margin-top:80px;
+}
+.Service_title h2 {
+    width:630px;
+    border-bottom: 2px solid var(--hovercolor);
+    margin-left:190px;
+}
+.Service_title{
+   margin-bottom:50px;
+}
+
+.Service_img{
+    z-index:-1;
+} 
+.Service_img img{
+    height:600px;
+    
+}
+.Service_menu{
+   z-index:999;
+}
+.Service_menu li .service-icon img{
+  border:1px solid var(--textcolor);
+  border-radius:100%;
+  background:var(--textcolor);
+  padding: 20px;
+  cursor: pointer;
+  transition: all linear 0.9s;
+  -webkit-transition: all linear 0.9s;
+  -moz-transition: all linear 0.9s;
+  -ms-transition: all linear 0.9s;
+  -o-transition: all linear 0.9s;
+}
+.Service_menu li .service-icon img:hover{
+    background:var(--bgcolor);
+}
+.Service_menu li .service-menu-title{
+     margin-top:-90px;
+     font-size: 32px;
+     margin-left:100px;
+     font-weight: 500;
+     font-family: 'Montserrat',
+     sans-serif;
+     color:var(--titlecolor);
+}
+.Service_menu li p{
+     margin-top:15px;
+     font-size: 17px;
+     margin-left:100px;
+     font-weight: 400;
+     line-height: 26px;
+     width: 320px;
+     color:var(--titlecolor);
+}
+.Service_menu li span{
+    font-weight:600;
+    color:var(--hovercolor);
+}
+.Service_items{
+    margin-top:52px ;
+}
+.Service_items1{
+     margin-top:52px;
+     margin-left:-40px;
+}
+.Service_items2 {
+    margin-top:52px;
+    margin-left: -90px;
+}
+.Service_items3 {
+    margin-top:52px;
+    margin-left: -140px;
+}
+/*************************
+OUR GALLERY
+*************************/
+#GALLERY{
+    margin-top:80px;
+    background:var(--bgcolor);
+    overflow: hidden;
+}
+.GALLERY_title h2 {
+    width:350px;
+    border-bottom: 2px solid var(--hovercolor);
+    margin-left:180px; 
+}
+.GALLERY_view{
+    margin-top:40px; 
+}
+.GALLERY_info{
+    overflow: hidden;
+    margin:0px 7px;
+    position: relative;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+.GALLERY_pic img {
+    height:300px;
+}
+.gallary_overly {
+   position: absolute;
+   top:15px;
+   left:15px;
+   bottom:15px;
+   right:15px;
+   background:rgba(0, 0, 0, 0.541);
+   border: 5px solid rgba(255, 255, 255, 0.8);
+   opacity:0;
+   cursor: pointer;
+   transition: all linear 0.9s;
+   -webkit-transition: all linear 0.9s;
+   -moz-transition: all linear 0.9s;
+   -ms-transition: all linear 0.9s;
+   -o-transition: all linear 0.9s;
+}
+.gallary_overly i{
+     margin-top:120px;
+    font-size:30px;
+    color:var(--hovercolor);
+}
+.GALLERY_info:hover .gallary_overly{
+    opacity: 1;
+}
+
+.GALLERY_slider .slick-dots {
+    margin-left: 460px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.GALLERY_slider .slick-dots li {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+    background: var(--bgcolor);
+    display: inline-block;
+}
+
+.GALLERY_slider .slick-dots li button {
+    width: 17px;
+    border: 1px solid var(--textcolor);
+    height: 17px;
+    border-radius: 50%;
+    color: transparent;
+}
+
+.GALLERY_slider .slick-dots .slick-active button {
+    background: var(--hovercolor);
+}
+
+/*************************
+Counter Part CSS
+*************************/
+#Counter{
+   margin:80px 0px 0px 0px;
+   height:200px;
+   background-size: cover !important;
+   background-position: center !important;
+   position: relative;
+}
+
+.Counter_info1{
+    margin:30px 0px 0px 0px;
+}
+.Counter_info1 span{
+   color:var(--bdcolor);
+   font-size:35px;
+}
+.Counter_info1 h2{
+  color:var(--maincolor);
+   line-height: 55px;
+}
+.Counter_info1 p{
+    color: var(--bdcolor);
+    font-size:25px;
+    font-weight: 700;
+}
+
+ /* counter part css start */
+ #counter {
+     margin: 50px 0px;
+     background-size: cover !important;
+     background-position: center !important;
+ }
+
+ .counter_overly {
+     padding: 40px 0px;
+     background: rgba(0, 0, 0, 0.9);
+
+ }
+
+ .counter_info h4 span {
+     color: var(--maincolor);
+     font-family: 'Oswald', sans-serif;
+     font-weight: 700;
+     font-size: 40px;
+ }
+
+ .counter_info p {
+     font-family: 'Oswald', sans-serif;
+     font-weight: 400;
+     color: var(--maincolor);
+     font-size: 16px;
+ }
+
+ /* counter part css end */
+
+ /* Our Special Staff Part css Start */
+
+ #Staff {
+     margin-top: 80px;
+     background: var(--bgcolor);
+     overflow: hidden;
+ }
+
+ .Staff_title h2 {
+     width:500px;
+     border-bottom: 2px solid var(--hovercolor);
+     margin-left: 150px;
+ }
+ .Staff_view{
+    position: relative;
+    padding:40px 0px 10px 0px;
+ }
+ .Staff_pic{
+  cursor: pointer;
+  position: relative;
+ }
+ .Staff_pic img{
+     cursor: pointer;
+    position: relative;
+    height:350px;
+    width:93%;
+ }
+ .Staff_overly{
+   position:absolute;
+   width:264px;
+   z-index:999;
+   margin: -80px 0px 0px 0px;
+   cursor: pointer;
+    transition: all linear 1s;
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -ms-transition: all linear 1s;
+    -o-transition: all linear 1s;
+ }
+ .Staff_info:hover .Staff_overly{
+     margin: -145px 0px 0px 0px;
+ }
+ .Staff_part1{
+     background:rgba(0, 0, 0, 0.541);
+     padding:7px 0px 10px 0px;
+      z-index:999;
+ }
+
+ .Staff_part1 h5{
+     font-size: 25px;
+     font-weight: 500;
+     font-family: 'Montserrat', sans-serif;
+     color: var(--maincolor);
+     line-height:40px;
+ }
+  .Staff_part1 h6{
+      font-size: 20px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--maincolor); 
+  }
+  .Staff_part2{
+      background:var(--hovercolor);
+      padding:15px 0px 10px 0px;
+      opacity: 0;
+       cursor: pointer;
+       transition: all linear 0.9s;
+       -webkit-transition: all linear 0.9s;
+       -moz-transition: all linear 0.9s;
+       -ms-transition: all linear 0.9s;
+       -o-transition: all linear 0.9s;
+  }
+
+.Staff_info:hover .Staff_part2 {
+    opacity: 1;
+}
+
+ .Staff_part2 li{
+    display:inline-block;
+    margin: 0px 3px;
+     width: 40px;
+     height:40px;
+    padding:7px 0px;
+     border: 1px solid var(--maincolor);
+     border-radius: 100%;
+      cursor: pointer;
+      transition: all linear 0.9s;
+      -webkit-transition: all linear 0.9s;
+      -moz-transition: all linear 0.9s;
+      -ms-transition: all linear 0.9s;
+      -o-transition: all linear 0.9s;
+  }
+.Staff_part2 li a{
+    color:var(--maincolor);
+    font-size:16px;
+}
+.Staff_part2 li:hover{
+    background:var(--imgbg) ;
+}
+.Staff_slider .slick-dots {
+    margin-left: 460px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.Staff_slider .slick-dots li {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+    background: var(--bgcolor);
+    display: inline-block;
+}
+
+.Staff_slider .slick-dots li button {
+    width: 17px;
+    border: 1px solid var(--textcolor);
+    height: 17px;
+    border-radius: 50%;
+    color: transparent;
+}
+
+.Staff_slider .slick-dots .slick-active button {
+    background: var(--hovercolor);
+}
+
+/* Our Special Staff Part css end */
+
+/*footer Part start CSS */
+#footer{
+ margin:60px 0px 0px 0px;
+ background:var(--imgbg);
+ padding:40px 0px 40px 0px;
+}
+.footer_content1 p{
+  margin:20px 0px 30px -10px;
+  color:var(--bdcolor);
+}
+.footer_content1 li {
+    display: inline-block;
+    margin: 0px 30px 0px -12px;
+    width: 43px;
+    height: 43px;
+    padding: 7px 12px;
+    border: 1px solid var(--maincolor);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+.footer_content1 li:first-child{
+   padding: 7px 14px;
+}
+.footer_content1 li a {
+    color: var(--maincolor);
+    font-size: 18px;
+}
+
+.footer_content1 li:hover {
+    background: var(--hovercolor);
+}
+
+.footer_content2{
+    margin: 10px 0px 0px 0px;
+}
+.footer_content2 h3{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Montserrat',
+    sans-serif;
+    color: var(--maincolor);
+}
+ .footer_list1 {
+      margin: 40px 0px 0px 0px;
+      display: inline-block;
+ }
+ .footer_list1 li {
+    margin: 0px 0px 40px 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px 8px;
+    border: 1px solid var(--maincolor);
+    cursor: pointer;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+
+
+ .footer_list1 li a {
+    color: var(--maincolor);
+    font-size: 15px;
+}
+
+ .footer_list1 li:hover {
+    background: var(--hovercolor);
+}
+.footer_list2{
+    display:inline-block;
+    margin:40px 0px 0px 0px;
+}
+.footer_list2 li{
+     margin:0px 0px 42px -90px;
+}
+.footer_list2 li a {
+   color: var(--bdcolor);
+}
+.footer_link{
+     margin:40px 0px 0px 0px;
+}
+.footer_link li{
+    margin:0px 0px 15px 0px;
+}
+.footer_link li a{
+   color: var(--maincolor);
+   font-size: 16px;
+}
+.footer_content4{
+     margin:10px 0px 0px -70px;
+}
+
+.footer_content4 h3 {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Montserrat',
+        sans-serif;
+    color: var(--maincolor);
+}
+.footer_img{
+     margin:40px 0px 0px 0px;
+}
+.footer_img li{
+   display:inline-block;
+   margin:0px 0px 10px 0px;
+}
+.footer_img li img{
+    height:70px;
+    width:100px;
+}
+/*footer Part  end */
+
+/*footer bottom Part start */
+#footer_bottom{
+    background:var(--btnbgcolor);
+}
+
+/*footer bottom Part end */
+
+
+
+
+/*************************************** Online_Booking_Page CSS **************************************/
+
+
+/*************************
+  Slider Part start
+*************************/
+#slider_booking {
+    margin-top: -167px;
+    z-index: 1;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+
+.slider_book_Pic{
+    height:350px;
+    background: rgba(0, 0, 0, 0.8);
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+}
+
+.slider_booking_text {
+    margin:200px 0px 0px 0px;
+}
+
+.slider_booking_text h4 {
+    color: var(--maincolor);
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Montserrat',
+     sans-serif;
+     width:50%;
+     padding:0px 0px 15px 0px;
+     margin:0px 0px 15px 230px;
+     border-bottom:2px solid var(--hovercolor);
+
+}
+.slider_booking_text a{
+     color: var(--hovercolor);
+     font-size: 20px;
+     font-weight: 600;
+     position: relative;
+     font-family: 'Montserrat',
+     sans-serif;
+}
+.slider_booking_text i{
+    color: var(--textcolor);
+     font-size: 25px;
+    padding:0px 5px;
+}
+.BOOKING_pic {
+    position: relative;
+    margin:20px 0px 0px 0px;
+}
+
+.BOOKING_pic img{
+    display: block;
+    height:120px;
+    width:150px;
+    border:2px solid var(--textcolor);
+}
+ .BOOKING_pic h4 {
+    position: absolute;
+     display: block;
+     color:var(--titlecolor);
+     margin:-120px 0px 0px 180px;
+      font-size: 22px;
+      font-weight: 600;
+      font-family: 'Montserrat',
+      sans-serif;
+}
+.BOOKING_pic span{
+  position: absolute;
+   font-size: 18px;
+   font-weight: 500;
+   color:var(--hovercolor);
+   margin:-85px 0px 0px 180px;
+}
+.BOOKING_pic i{
+    margin:0px 5px 0px 0px;
+}
+.BOOKING_room_info{
+    display: inline-block;
+    margin:20px 0px 0px 0px;
+}
+.BOOKING_room_info1 {
+    display:inline-block;
+    margin:0px 0px 0px 85px;
+}
+.BOOKING_room{
+    margin:20px 0px 0px 0px;
+}
+.BOOKING_room h4,
+.BOOKING_room1 h4
+{
+     color:var(--titlecolor);
+     font-size: 19px;
+     font-weight: 600;
+     font-family: 'Montserrat',
+     sans-serif;
+    margin:0px 0px 5px 0px;
+    text-transform:uppercase;
+}
+.BOOKING_room span,
+.BOOKING_room1 span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--hovercolor);
+}
+.BOOKING_room i,
+.BOOKING_room1 i
+{
+    margin:0px 5px 0px 0px;
+}
+.BOOKING_room1{
+    margin:20px 0px 0px 0px;
+}
+/*************************
+  Slider Part end
+*************************/
+
+/*************************
+  Booking part Start
+*************************/
+#Booking_part{
+    margin:70px 0px 0px 0px;
+}
+.BOOKING_DETAILS{
+    background:#f2f2f2;
+    padding:10px 0px 20px 20px;
+}
+.BOOKING_title h2{
+     color: var(--titlecolor);
+     font-size: 25px;
+     font-weight: 500;
+     position: relative;
+     font-family: 'Montserrat',
+     sans-serif;
+     line-height: 50px;
+}
+.BOOKING_title p{
+    font-size:19px;
+    color:var(--hovercolor);
+}
+.BOOKING_help{
+    margin:30px 0px 0px 0px;
+    border:15px solid var(--hovercolor);
+    padding:20px 0px 0px 20px;
+}
+
+.BOOKING_help_title h3{
+  font-size:28px;
+   font-weight:550;
+   font-family: 'Montserrat',
+   sans-serif;
+   text-transform:uppercase;
+}
+.BOOKING_help_title p{
+    font-size:18px;
+    margin:10px 0px 0px 0px;
+    color:var(--hovercolor)
+}
+.BOOKING_help_icon{
+    margin:20px 0px 20px 0px;
+}
+.BOOKING_help_icon p{
+    display: inline-block;
+}
+
+.BOOKING_help_icon i{
+     padding:20px 30px;
+     border:2px solid var(--imgbg);
+     border-radius:100%;
+      font-size: 30px;
+     color:var(--btnbgcolor); 
+}
+.BOOKING_help_icon span{
+    display:inline-block;
+    font-size: 25px;
+    margin:0px 0px 0px 10px;
+}
+.BOOKING_help_icon h6{
+    color:var(--titlecolor);
+    margin:40px 0px 0px 30px;
+    
+}
+.BOOKING_from{
+     background:#f2f2f2;
+     padding:20px 0px 30px 20px;
+}
+.BOOKING_from_title h3{
+    color: var(--titlecolor);
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Montserrat',
+    sans-serif;
+    margin:0px 0px 15px 0px;
+}
+.BOOKING_from_title span{
+   color: var(--hovercolor);
+   font-size: 20px;
+   font-weight: 500;
+   font-family: 'Montserrat',
+   sans-serif;
+}
+.BOOKING_from_title p {
+    color: var(--titlecolor);
+    font-size: 18px;
+    font-weight: 400;
+    margin:10px 0px 0px 0px;
+}
+.form-group1{
+    width:45%;
+    display:inline-block;
+    margin:30px 10px 0px 0px;
+}
+.form-group1 input {
+   background:none;
+   border:1px solid var(--textcolor);
+   border-radius:10px;
+   text-transform:uppercase;
+}
+.form-group1 select{
+    background: none;
+    border: 1px solid var(--textcolor);
+    border-radius: 10px;
+    text-transform:uppercase;
+}
+.form-group1 textarea{
+    width:204%;
+    height:100px;
+    background:none;
+    color: #000;
+}
+.checkbox3{
+    margin:10px 0px 0px 0px;
+}
+.onlineBooking_btn {
+    display: inline-block;
+    margin:30px 80px 0px 20px;
+}
+
+.onlineBooking_btn button {
+    width: 250px;
+    font-size: 22px;
+    font-weight: 700;
+    height: 40px;
+    z-index: 99;
+    color: var(--bdcolor);
+    background: var(--textcolor);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+
+.onlineBooking_btn button:hover {
+    color: var(--maincolor);
+    background: var(--hovercolor);
+}
+/*************************
+  Booking part end
+*************************/
+
+
+
+
+
+/*************************************** Athur_Login_Page CSS **************************************/
+
+/******slider part css*****/
+#slide{
+    position: relative;
+}
+
+.login_bg_Pic{
+    height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.login_bg_Pic:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.500);
+}
+
+.home-link{
+    padding:20px 0px 0px 0px;
+}
+
+.home-link p{
+    font-size:20px;
+}
+
+.home-link p a {
+    color:var(--hovercolor);
+    font-weight: 600;
+}
+
+.home-link i {
+    color: var(--hovercolor);
+    margin: 0px 4px;
+}
+
+/******form part css*****/
+#login {
+    margin-top: 0px;
+}
+
+.login_info {
+    z-index: 1;
+    margin:90px 0px 0px 100px;
+    width:70%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 0px;
+}
+
+.login_txt h2 {
+    font-style:italic;
+    font-size: 45px;  
+    font-weight: 400;
+    text-align: center;
+    margin:0px 0px 0px 130px;
+    color: var(--hovercolor);
+    text-transform: uppercase;
+}
+.login_txt span{
+    color: var(--bgcolor);
+    margin: 0px 0px 0px 10px;
+}
+
+.login_txt h4 {
+    font-weight:500;
+    font-size: 20px;
+    margin: 30px 0px 0px 0px;
+    color: var(--maincolor);
+}
+
+.login_email input {
+    padding: 4px;
+    width:55%;
+    background: none;
+    text-transform: none;
+    color: var(--maincolor);
+    font-size: 17px;
+    margin: 20px 0px 0px 150px;
+    box-shadow: none;
+    border: 1px solid #e7e7e7;
+}
+
+.login_pass input {
+    padding: 4px;
+    width:55%;
+    background: none;
+    color: var(--maincolor);
+    text-transform: none;
+    font-size: 17px;
+    margin: 20px 0px 0px 150px;
+    box-shadow: none;
+    border: 1px solid #e7e7e7;
+}
+
+.checkbox1 {
+    display: inline-block;
+    margin: 20px 0px 0px 140px;
+    color: var(--maincolor);
+}
+
+.checkbox1 label {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--maincolor);
+}
+
+.forget_pass {
+    display: inline-block;
+    margin-left: 160px;
+}
+
+.forget_pass a {
+    color: var(--hovercolor);
+    font-size: 16px;
+}
+
+.login_btn {
+    margin-left: 170px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.login_btn button {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat',
+        sans-serif;
+    width: 200px;
+    height: 40px;
+    background: var(--btnclr);
+    color: var(--maincolor);
+    cursor: pointer;
+    transition: all linear 0.9s;
+    -webkit-transition: all linear 0.9s;
+    -moz-transition: all linear 0.9s;
+    -ms-transition: all linear 0.9s;
+    -o-transition: all linear 0.9s;
+}
+
+.login_btn button:hover {
+    background: var(--hovercolor);
+    border: none;
+}
+
+.register_btn {
+    margin-left: 110px;
+    margin-top: 30px;
+}
+
+.register_btn p {
+    color: var(--maincolor);
+}
+
+.register_btn a {
+    color: var(--hovercolor);
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+}
+
+.exmaple {
+    background-color: #e23e38;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center !important;
+}
+
+
+/*************************************** Athur_Register_Page CSS **************************************/
+
+/******slider part css*****/
+.login_bg1 {
+    height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center !important;
+    position: relative;
+}
+
+/******form part css*****/
+.login_txt1 h2 {
+    font-style: italic;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0px 0px 0px 10px;
+    color: var(--hovercolor);
+    text-transform: uppercase;
+}
+.login_txt1 span {
+    color: var(--bgcolor);
+    margin: 0px 0px 0px 10px;
+}
+.login_txt1 h4 {
+    padding-left: 140px;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px 0px 0px -10px;
+    color: var(--maincolor);
+}
+
+.from_info {
+    margin: 20px 0px 0px 50px;
+}
+
+.form-group {
+    display: inline-block;
+    margin: 10px 80px;
+}
+
+.form-group input {
+    width: 150%;
+    padding: 5px;
+    background: none;
+    font-size: 16px;
+    text-transform: none;
+    color: var(--maincolor);
+    box-shadow: none;
+    border: 1px solid #e7e7e7;
+}
+
+.form-group input:focus {
+    outline: 0;
+}
+
+.checkbox2 {
+    margin: 10px 0px 0px 80px;
+    color: var(--maincolor);
+}
+
+.checkbox2 label {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--maincolor);
+}
+.Register_btn{
+   display: inline-block;
+}
+.Register_btn button{
+    margin:30px 0px 0px 80px;
+    width: 250px;
+     font-size: 22px;
+     font-weight: 700;
+    height: 40px;
+    z-index: 99;
+    color:var(--bdcolor);
+    background:var(--textcolor);
+    border-radius:15px;
+      cursor: pointer;
+      transition: all linear 0.9s;
+      -webkit-transition: all linear 0.9s;
+      -moz-transition: all linear 0.9s;
+      -ms-transition: all linear 0.9s;
+      -o-transition: all linear 0.9s;
+}
+.Register_btn button:hover{
+    color:var(--maincolor);
+    background:var(--hovercolor);
+}
+
+.login_btn1{
+    margin:-40px 0px 0px 520px;
+    width:250px;
+     width:250px;
+     height: 40px;
+     z-index: 99;
+     background:var(--textcolor);
+     border-radius:15px;
+     cursor: pointer;
+      font-size: 22px;
+      font-weight: 700;
+     padding: 5px 0px 0px 70px;
+     transition: all linear 0.9s;
+     -webkit-transition: all linear 0.9s;
+     -moz-transition: all linear 0.9s;
+     -ms-transition: all linear 0.9s;
+     -o-transition: all linear 0.9s;
+}
+.login_btn1:hover{
+ background:var(--hovercolor);
+}
+.login_btn1 a{
+   color:var(--bdcolor);
+}
+
+/*************************************** Athur_Forgetpass_Page CSS **************************************/
+
+
+
+
+/******form part css*****/
+
+.login_info1 {
+    z-index: 1;
+    margin: 140px 0px 0px 100px;
+    width: 70%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 0px;
+}
+.login_txt h5 {
+    font-weight:500;
+    font-size: 20px;
+    margin:30px 0px 0px -140px;
+    color: var(--maincolor);
+}
+

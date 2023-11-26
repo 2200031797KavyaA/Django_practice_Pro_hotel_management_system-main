@@ -1,0 +1,601 @@
+{%extends 'allinclude.html'%}
+ {% block title %}
+    Hotel & Resort
+		  {% endblock %}
+{% block contant %}
+
+    {% load static %}
+<!--================Slider Start=================-->
+   <section id="slider">
+         <div class="slider_pic" style="background: url({%static 'Allfiles/photo/slider-1.jpg'%})">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                   <div class="col-md-10">
+                      <div class="slide_text">
+                         <h1 >welcome <span class="late">to Hotel Lucia</span> </h1>
+                         <p> Welcome to Hotel Booking Management, your one-stop solution for hassle-free hotel reservations.Quickly find the perfect hotel for your next stay. Use our search tool to browse and book hotels in the area.</p>
+                          <div class="slider-btn">
+                               <a class="default-btn" href="#" >explore</a>
+                          </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="pre_btn">
+                   <span><i class="fas fa-angle-left"></i></span>
+                </div>
+               <div class="next_btn">
+               <span><i class="fas fa-angle-right"></i></span>
+               </div>
+            </div>
+         </div>
+
+         <div class="slider_pic" style="background: url({%static 'Allfiles/photo/slider-2.jpg'%})">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                   <div class="col-md-10">
+                      <div class="slide_text">
+                         <h2>Enjoy a luxury experience</h2>
+                         <h4> Hotel & Resort</h4>
+                          <div class="slider-btn">
+                               <a class="default-btn" href="#" >explore</a>
+                          </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="pre_btn">
+                   <span><i class="fas fa-angle-left"></i></span>
+                </div>
+               <div class="next_btn">
+               <span><i class="fas fa-angle-right"></i></span>
+               </div>
+            </div>
+         </div>
+
+         <div class="slider_pic" style="background: url({%static 'Allfiles/photo/slider-3.jpg'%})">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                   <div class="col-md-10">
+                      <div class="slide_text">
+                         <h2>Spend Quality Holidays With Us</h2>
+                         <p>The best way to spend your precious time and cherish every moment with your loved ones. Join Today!</p>
+                          <div class="slider-btn">
+                               <a class="default-btn" href="#" >explore</a>
+                          </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="pre_btn">
+                   <span><i class="fas fa-angle-left"></i></span>
+                </div>
+               <div class="next_btn">
+               <span><i class="fas fa-angle-right"></i></span>
+               </div>
+            </div>
+         </div>
+   </section>
+
+
+    <!--================Book A Table Area =================-->
+    <section id="Book_Table">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-12">
+               <form>
+                  <div class="Book_info">
+                     <div class="Table_item">
+                        <input type="text" placeholder="Check in" class="Check_in" >
+                        <span class="open"><i class="far fa-calendar-alt"></i></span>
+                     </div>
+                      <div class="Table_item" >
+                        <input type="text" placeholder="Check out" class="Check_out" >
+                        <span class="open1"><i class="far fa-calendar-alt"></i></span>
+                     </div>
+                     <div class="Table_item">
+                         <select name="adults">
+                            <option>ADULTS</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                         </select>
+                     </div>
+                     <div class="Table_item">
+                           <select name="children">
+                              <option>CHILDREN</option>
+                              <option>0</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                           </select>
+                      </div>
+                      <div class="Table_item">
+                         <div class="book_btn">
+                           <a href="#">Check Availability</a>
+                         </div>
+                    </div>
+                  </div>
+               </form>
+             </div>
+          </div>
+       </div>
+    </section>
+
+     <!--================About Part=================-->
+     <section id="about">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-8">
+                 <div class="about_video">
+                    <img src="{%static 'Allfiles/Photo/video_pic.jpg'%}" alt="img">
+                     <a data-video-id="q0wR-QcVH0U" class="video_btn" ><i class="far fa-play-circle"></i></a>
+                 </div>
+              </div>
+               <div class="col-lg-4">
+                 <div class="About_info">
+                   <h2 class="about-title">About Us</h2>
+                      <p>Welcome to Hotel Booking Management, your one-stop solution for hassle-free hotel reservations.Quickly find the perfect hotel for your next stay. Use our search tool to browse and book hotels in the area.</p>
+                      <p>This is such a great place to connect and spend your free time in peace.</p>
+                      <p>Hope you enjoy our services.</p>
+                     <div class="about_btn">
+                     <a href="#" class="read-more">READ MORE </a>
+                     </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+
+    <!--================EXPLOR OUR ROOMS=================-->
+    <section id="OUR_ROOMS">
+       <div class="container">
+          <div class="row justify-content-center text-center">
+             <div class="col-lg-8">
+                <div class="ROOMS_Title">
+                   <h2>EXPLORE OUR ROOMS</h2>
+                   <p>Welcome to your one stop 5 star rated hotel with all the luxuries you ever need. This is your time. Enjoy!</p>
+                </div>
+             </div>
+          </div>
+          <div class="ROOMS_info">
+           <div class="row room_slide">
+                <div class="col-lg-4">
+                   <div class="rooms-view">
+                     <div class="ROOMS_pic">
+
+                       <img src="{%static 'Allfiles/Photo/room-1.jpg'%}" alt="img">
+                       <div class="btn ">
+                          <div class="room_btn">
+                            <a href="#">Booking Now</a>
+                          </div>
+                       </div>
+                     </div>
+                     <div class="ROOMS_text text-center justify-content-center">
+                         <h3> Couple Room </h3>
+                         <span><i class="fas fa-dollar-sign"></i>300</span>
+                         <p>Best room to consider for newly weds. Feels like a luxorious suite. Ratings: 4.6/5</p>
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                   <div class="rooms-view">
+                     <div class="ROOMS_pic">
+                       <img src=" {%static 'Allfiles/Photo/room-2.jpg'%}" alt="img">
+                       <div class="btn ">
+                          <div class="room_btn">
+                            <a href="#">Booking Now</a>
+                          </div>
+                       </div>
+                     </div>
+                     <div class="ROOMS_text text-center justify-content-center">
+                         <h3> Single Room </h3>
+                         <span><i class="fas fa-dollar-sign"></i>250</span>
+                         <p>One of the best rooms that provide valuable alone time, also comes with a lot of features. Ratings: 4.5/5</p>
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                   <div class="rooms-view">
+                     <div class="ROOMS_pic">
+                       <img src="{%static 'Allfiles/Photo/room-3.jpg'%}" alt="img">
+                       <div class="btn ">
+                          <div class="room_btn">
+                            <a href="#">Booking Now</a>
+                          </div>
+                       </div>
+                     </div>
+                     <div class="ROOMS_text text-center justify-content-center">
+                         <h3> Double Room </h3>
+                         <span><i class="fas fa-dollar-sign"></i>310</span>
+                         <p>Comes with an extra balcony and child space. Best for adults & children. Rating: 4.5/5</p>
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                   <div class="rooms-view">
+                     <div class="ROOMS_pic">
+                       <img src="{%static 'Allfiles/Photo/room-4.jpg'%}" alt="img">
+                       <div class="btn ">
+                          <div class="room_btn">
+                            <a href="#">Booking Now</a>
+                          </div>
+                       </div>
+                     </div>
+                     <div class="ROOMS_text text-center justify-content-center">
+                         <h3> Luxury Room </h3>
+                         <span><i class="fas fa-dollar-sign"></i>350</span>
+                         <p>One of our top rated stay. Availlable at discount price 25% and with a free spa coupon. Ratings: 4.8/5</p>
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                   <div class="rooms-view">
+                     <div class="ROOMS_pic">
+                       <img src="{%static 'Allfiles/Photo/room-5.jpg'%}" alt="img">
+                       <div class="btn ">
+                          <div class="room_btn">
+                            <a href="#">Booking Now</a>
+                          </div>
+                       </div>
+                     </div>
+                     <div class="ROOMS_text text-center justify-content-center">
+                         <h3>Family Room </h3>
+                         <span><i class="fas fa-dollar-sign"></i>400</span>
+                         <p>Highly recommended to parents with toddlers and babies.Offers available. Ratins: 4.6/5</p>
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                   <div class="rooms-view">
+                     <div class="ROOMS_pic">
+                       <img src="{%static 'Allfiles/Photo/room-6.jpg'%}" alt="img">
+                       <div class="btn ">
+                          <div class="room_btn">
+                            <a href="#">Booking Now</a>
+                          </div>
+                       </div>
+                     </div>
+                     <div class="ROOMS_text text-center justify-content-center">
+                         <h3> Presidential Room </h3>
+                         <span><i class="fas fa-dollar-sign"></i>300</span>
+                         <p>Our top uxury room. Only availabe for VIP's with verified identity. Ratings: 4.7/5</p>
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                     </div>
+                  </div>
+                </div>
+               </div>
+           </div>
+       </div>
+    </section>
+
+    <!--================OUR AWESOME SERVICES=================-->
+    <section id="Service">
+          <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-12">
+                     <div class="Service_title">
+                         <h2>OUR AWESOME SERVICES </h2>
+                     </div>
+                </div>
+            </div>
+         </diV>
+         <div class="container">
+              <div class="row">
+                 <div class="col-lg-7">
+                     <div id="newDom">
+                           <div class="Service_img tab-contx" id="swim" >
+                              <img src=" {%static 'Allfiles/Photo/service-1.png'%}" alt="img">
+                           </div>
+                           <div class="Service_img tab-contx hide" id="spa">
+                              <img src=" {%static 'Allfiles/Photo/service-2.png'%}" alt="img">
+                            </div>
+                            <div class="Service_img tab-contx hide" id="Restaurant">
+                              <img src=" {%static 'Allfiles/Photo/service-3.png'%}" alt="img">
+                            </div>
+                            <div class="Service_img tab-contx hide" id="Conference">
+                              <img src=" {%static 'Allfiles/Photo/service-4.png'%}" alt="img">
+                            </div>
+                     </div>
+                </div>
+
+                 <div class="col-lg-5">
+                     <div class="Service_menu">
+                        <ul class="tabs" id="example">
+                             <li class="Service_items" rel="#swim">
+                                 <a href="#swim">
+                                    <span class="service-icon">
+
+                                        <img src="{%static 'Allfiles/Photo/swim.png'%}" alt="img">
+                                    </span>
+                                    <h5 class="service-menu-title" rel="#swim">Swimming Pool</h5>
+                                    <p class="text"><span>Swimming Pool</span> This is our swimming pool. Our services are proven one of the best. </p>
+                                </a>
+                             </li>
+                              <li class="Service_items1" rel="#spa">
+                                 <a href="#spa">
+                                    <span class="service-icon" >
+                                        <img src="{%static 'Allfiles/Photo/spa.png'%}" alt="img">
+                                    </span>
+                                    <h5 class="service-menu-title" rel="#spa">Spa, beauty & Health</h5>
+                                    <p class="text"><span>Spa and beauty</span> This is our spa, beauty and health. Our services are proven one of the best. </p>
+                                </a>
+                             </li>
+                              <li class="Service_items2"  rel="#Restaurant">
+                                 <a  href="#Restaurant">
+                                    <span class="service-icon">
+
+                                        <img src=" {%static 'Allfiles/Photo/restaurent.png'%}" alt="">
+                                    </span>
+                                    <h5 class="service-menu-title"  rel="#Restaurant">Restaurant</h5>
+                                    <p class="text"><span>Restaurant</span> This is our restaurant. Our services are proven one of the best. </p>
+                                </a>
+                             </li>
+                              <li class="Service_items3" rel="#Conference">
+                                 <a href="#Conference">
+                                    <span class="service-icon">
+
+                                        <img src="  {%static 'Allfiles/Photo/conference.png'%}" alt="">
+                                    </span>
+                                    <h5 class="service-menu-title" rel="#Conference">Conference Hall</h5>
+                                    <p class="text"><span>Conference</span> This is our conference hall. Our services are proven one of the best. </p>
+                                </a>
+                             </li>
+                        </ul>
+                     </div>
+                 </div>
+              </div>
+         </div>
+    </section>
+
+
+<!--================OUR GALLERY=================-->
+<section id="GALLERY">
+   <div class="container">
+       <div class="row text-center justify-content-center">
+          <div class="col-lg-8">
+              <div class="GALLERY_title">
+                <h2>OUR GALLERY</h2>
+                <p>This is your one-stop solution for hassle-free hotel reservations.Quickly find the perfect hotel for your next stay. Use our search tool to browse and book hotels in the area.</p>
+               </div>
+          </div>
+       </div>
+       <div class="GALLERY_view">
+          <div class="row GALLERY_slider">
+             <div class="col-lg-3">
+                 <div class="GALLERY_info" >
+                    <div class="GALLERY_pic">
+                       <img src="{%static 'Allfiles/Photo/gallery-1.jpg'%}" alt="img">
+                     </div>
+                     <div class="gallary_overly text-center justify-content-center"  href="{%static 'Allfiles/photo/gallery-1-pop.jpg'%}">
+                       <i class="fas fa-search-plus"></i>
+                     </div>
+                  </div>
+             </div>
+             <div class="col-lg-3">
+                 <div class="GALLERY_info">
+                    <div class="GALLERY_pic">
+                       <img src=" {%static 'Allfiles/Photo/gallery-2.jpg'%}" alt="img">
+                     </div>
+                      <div class="gallary_overly text-center justify-content-center"  href="{%static 'Allfiles/photo/gallery-2-pop.jpg'%}">
+                       <i class="fas fa-search-plus"></i>
+                     </div>
+                  </div>
+             </div>
+             <div class="col-lg-3">
+                 <div class="GALLERY_info">
+                    <div class="GALLERY_pic">
+                       <img src=" {%static 'Allfiles/Photo/gallery-3.jpg'%}" alt="img">
+                     </div>
+                      <div class="gallary_overly text-center justify-content-center"  href="{%static 'Allfiles/photo/gallery-3-pop.jpg'%}">
+                       <i class="fas fa-search-plus"></i>
+                     </div>
+                  </div>
+             </div>
+             <div class="col-lg-3">
+                 <div class="GALLERY_info">
+                    <div class="GALLERY_pic">
+                       <img src=" {%static 'Allfiles/Photo/gallery-3.jpg'%}" alt="img">
+                     </div>
+                      <div class="gallary_overly text-center justify-content-center" href="{%static 'Allfiles/photo/gallery-3-pop.jpg'%}">
+                       <i class="fas fa-search-plus"></i>
+                     </div>
+                  </div>
+             </div>
+             <div class="col-lg-3">
+                 <div class="GALLERY_info" href="{%static 'Allfiles/photo/gallery-1-pop.jpg'%}">
+                    <div class="GALLERY_pic">
+                       <img src=" {%static 'Allfiles/Photo/gallery-1.jpg'%}" alt="img">
+                     </div>
+                      <div class="gallary_overly text-center justify-content-center">
+                       <i class="fas fa-search-plus"></i>
+                     </div>
+                  </div>
+             </div>
+             <div class="col-lg-3">
+                 <div class="GALLERY_info" href="{%static 'Allfiles/photo/gallery-2-pop.jpg'%}">
+                    <div class="GALLERY_pic">
+                       <img src=" {%static 'Allfiles/Photo/gallery-2.jpg'%}" alt="img">
+                     </div>
+                      <div class="gallary_overly text-center justify-content-center">
+                       <i class="fas fa-search-plus"></i>
+                     </div>
+                  </div>
+             </div>
+             <div class="col-lg-3">
+                 <div class="GALLERY_info" href="{%static 'Allfiles/photo/gallery-3-pop.jpg'%}">
+                    <div class="GALLERY_pic">
+                       <img src="{%static 'Allfiles/Photo/gallery-3.jpg'%}" alt="img">
+                     </div>
+                      <div class="gallary_overly text-center justify-content-center">
+                       <i class="fas fa-search-plus"></i>
+                     </div>
+                  </div>
+             </div>
+         </div>
+       </div>
+   </div>
+</section>
+    <!--================Counter Part Start=================-->
+
+    <section id="Counter" style="background:url({%static 'Allfiles/photo/bg1.jpg'%})">
+       <div class="container">
+          <div class="row">
+             <div class="Counter_info">
+                <div class="row">
+                     <div class="col-lg-3 text-center">
+                        <div class="Counter_info1">
+                            <span><i class="fas fa-user"></i></span>
+                            <h2 class="counter">1100+</h2>
+                            <p>Happy Clients </p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 text-center">
+                        <div class="Counter_info1">
+                            <span><i class="fas fa-user-friends"></i></span>
+                            <h2 class="counter">700+</h2>
+                            <p>New Friendships </p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 text-center">
+                        <div class="Counter_info1">
+                            <span><i class="fas fa-star"></i></span>
+                            <h2 class="counter">300</h2>
+                            <p>Five Start Ratings</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 text-center">
+                        <div class="Counter_info1">
+                            <span ><i class="fas fa-coffee"></i></span>
+                            <h2 class="counter">900+</h2>
+                            <p>Served Breakfast</p>
+                        </div>
+                     </div>
+               </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <!--================Counter Part End=================-->
+
+   <!--================Our Special Staff Part start =================-->
+   <section id="Staff">
+   <div class="container">
+       <div class="row text-center justify-content-center">
+          <div class="col-lg-8">
+              <div class="Staff_title">
+                <h2>OUR SPECIAL STAFF</h2>
+                <p>This is your one-stop solution for hassle-free hotel reservations.Quickly find the perfect hotel for your next stay. Use our search tool to browse and book hotels in the area.</p>
+               </div>
+          </div>
+       </div>
+       <div class="Staff_view">
+          <div class="row Staff_slider">
+             <div class="col-lg-3 Staff_info">
+                    <div class="Staff_pic">
+                       <img src="{%static 'Allfiles/Photo/team1.jpg'%}" alt="img">
+                     </div>
+                     <div class="Staff_overly">
+                         <div class="Staff_part1 text-center">
+                            <h5>Shirley Gibson</h5>
+                            <h6>Manager</h6>
+                         </div>
+                         <div class="Staff_part2 text-center">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                         </div>
+                     </div>
+             </div>
+              <div class="col-lg-3 Staff_info">
+                    <div class="Staff_pic">
+                       <img src="{%static 'Allfiles/Photo/team2.jpg'%}" alt="img">
+                     </div>
+                     <div class="Staff_overly">
+                         <div class="Staff_part1 text-center">
+                            <h5>Ronald Long</h5>
+                            <h6>Chif Reciption Officer</h6>
+                         </div>
+                         <div class="Staff_part2 text-center">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                         </div>
+                     </div>
+             </div>
+              <div class="col-lg-3 Staff_info">
+                    <div class="Staff_pic">
+                       <img src="{%static 'Allfiles/Photo/team3.jpg'%}" alt="img">
+                     </div>
+                     <div class="Staff_overly">
+                         <div class="Staff_part1 text-center">
+                            <h5>Ashley Sanchez</h5>
+                            <h6>Master Chef</h6>
+                         </div>
+                         <div class="Staff_part2 text-center">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                         </div>
+                     </div>
+             </div>
+              <div class="col-lg-3 Staff_info">
+                    <div class="Staff_pic">
+                       <img src="{%static 'Allfiles/Photo/team4.jpg'%}" alt="img">
+                     </div>
+                     <div class="Staff_overly">
+                         <div class="Staff_part1 text-center">
+                            <h5>Jessica Watson</h5>
+                            <h6>Housekeeping</h6>
+                         </div>
+                         <div class="Staff_part2 text-center">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                         </div>
+                     </div>
+             </div>
+              <div class="col-lg-3 Staff_info">
+                    <div class="Staff_pic">
+                       <img src="{%static 'Allfiles/Photo/team5.jpg'%}" alt="img">
+                     </div>
+                     <div class="Staff_overly">
+                         <div class="Staff_part1 text-center">
+                            <h5>Shirley Gibson</h5>
+                            <h6>Manager</h6>
+                         </div>
+                         <div class="Staff_part2 text-center">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                         </div>
+                     </div>
+             </div>
+         </div>
+       </div>
+   </div>
+</section>
+    <!--================Our Special Staff Part end =================-->
+ {% endblock %}

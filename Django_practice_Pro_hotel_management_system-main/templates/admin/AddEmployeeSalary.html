@@ -1,0 +1,176 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Add Salary page
+{% endblock %}
+  {% block  pagecontant %}
+
+
+         <!-- page content -->
+      <!--************************************
+			form part start
+		*************************************-->
+
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Add Salary</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'AddEmployeeSalary' %}">Add Salary</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+
+          <div class="row" style="margin-top:15px; ">
+          <div class="col-lg-6" style="background: blue; ">
+           <div class="col-lg-12">
+               <div class="form_title">
+                   <h1>Manage Salary</h1>
+               </div>
+           </div>
+              <form method="post" action="" enctype="multipart/form-data">
+                 {% csrf_token %}
+                   <div class="col-lg-12">
+                      <div class="form-group from_info">
+                          <label class="form-label">Employee Id</label>
+                          <input type="text" name="Employee_Id" class="form-control" placeholder="Employee Id" required>
+                      </div>
+                   </div>
+                  <div class="col-lg-12">
+                      <div class="form-group from_info">
+                          <label class="form-label">Employee Name</label>
+                          <input type="text" name="Employee_Name" class="form-control" placeholder="Employee Name" required>
+                      </div>
+                   </div>
+                    <div class="col-lg-12">
+                      <div class="form-group from_info">
+                          <label class="form-label">Mobile Number</label>
+                          <input type="text" name="Mobile_Number" class="form-control" placeholder="Mobile Number" required>
+                      </div>
+                   </div>
+                  <div class="col-lg-12">
+                      <div class="form-group from_info">
+                          <label class="form-label">Email</label>
+                          <input type="text" name="Email" class="form-control" placeholder="Email" required>
+                      </div>
+                   </div>
+
+                        <div class="col-lg-12">
+                      <div class="form-group from_info">
+                          <label class="form-label">Departments</label>
+                              <select class="form-control" name="Departments" required>
+                                            <option value="Departments">Departments</option>
+                                            <option value="Housekeeping">Housekeeping</option>
+                                            <option value="Kitchen">Manager</option>
+                                            <option value="Security">Chef</option>
+                                            <option value="Food and Beverage">Food and Beverage</option>
+                                            <option value="Kitchen">Kitchen</option>
+                                            <option value="Security">Security</option>
+                                            <option value="Security">transport</option>
+                              </select>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Salary</label>
+                      <input type="text" name="Salary" class="form-control" placeholder="Salary" required>
+                  </div>
+              </div>
+
+              <div class="col-lg-12">
+                  <div class="form_btn">
+                      <button type="submit">Add</button>
+                  </div>
+                   <div class="form_btn">
+                      <button type="reset">Clear</button>
+                  </div>
+              </div>
+                  </form>
+          </div>
+              <div class="col-lg-6 form_right" style="background: blue;">
+                  <div class="col-lg-12">
+                      <div class="form_right_info">
+                          <form method="post" action="#" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <div class="from_info1">
+                                   <div class="form-group">
+                                      <select class="form-control" name="departments" required>
+                                            <option value="Departments">Departments</option>
+                                            <option value="Housekeeping">Housekeeping</option>
+                                            <option value="Kitchen">Manager</option>
+                                            <option value="Security">Chef</option>
+                                            <option value="Food and Beverage">Food and Beverage</option>
+                                            <option value="Kitchen">Kitchen</option>
+                                            <option value="Security">Security</option>
+                                            <option value="Security">transport</option>
+                                      </select>
+                                     </div>
+                                  </div>
+                              <div class="from_info2">
+                                   <div class="form-group">
+                                       <input type="search" name="serch" class="form-control" placeholder="" required>
+                                   </div>
+                              </div>
+                              <div class="from_info3">
+                                    <div class="form_btn1">
+                                         <button type="submit">Search</button>
+                                     </div>
+                              </div>
+                              <div class="from_info4">
+                                    <div class="form_btn1">
+                                         <button type="submit">Show All</button>
+                                     </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-lg-12  form_table">
+                      <div id="example" class="example  table-wrapper-scroll-y my-custom-scrollbar">
+                        <table  class="table-bordered table-striped">
+                          <tr>
+                              <th>Employee Id</th>
+                              <th>Employee Name</th>
+                              <th>Mobile Number</th>
+                              <th>Email</th>
+                               <th>Departments</th>
+                               <th>Salary</th>
+                               <th>Date</th>
+                               <th>Time</th>
+                               <th>Action</th>
+                          </tr>
+                             {%if data %}
+
+                                    {% for i in data %}
+
+                                     <tr>
+                                          <td>{{i.Employee_Id}}</td>
+                                          <td>{{i.Employee_Name}}</td>
+                                          <td>{{i.Mobile_Number}}</td>
+                                          <td>{{i.Email}}</td>
+                                          <td>{{i.Departments}}</td>
+                                          <td>{{i.Salary}}</td>
+                                          <td>{{i.Date}}</td>
+                                          <td>{{i.Time}}</td>
+                                          <td class="action">
+                                                   <a  href="{% url 'AddRooms_Delete' id=i.Id%}">Delete</a>
+                                                   <a  href="{% url 'EditRooms' id=i.Id%}">Update</a>
+                                          </td>
+                                     </tr>
+                             {%endfor%}
+
+                                  {% endif %}
+
+                        </table>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+ {% endblock %}

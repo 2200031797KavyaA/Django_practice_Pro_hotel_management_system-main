@@ -1,0 +1,272 @@
+{%extends 'admin/AdminAllinclude.html'%}
+{% block title %}
+ Add Customer page
+{% endblock %}
+  {% block  pagecontant %}
+
+
+         <!-- page content -->
+      <!--************************************
+			form part start
+		*************************************-->
+
+
+    <div class="right_col" role="main">
+        <div class="row">
+            <div class ="col-lg-12" style="background:gray;">
+                 <div class ="col-lg-6">
+                     <div class="add_student">
+                        <h2 >Add Customers</h2>
+                     </div>
+                 </div>
+                <div class ="col-lg-6">
+                    <div class="add_student_link">
+                        <a href="{% url 'Adminpage' %}">Home</a> <i class="fas fa-angle-right"></i> <a href="{% url 'AddCustomer' %}">Add Customers</a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+
+          <div class="row" style="margin-top:15px; ">
+          <div class="col-lg-6" style="background: blue; ">
+           <div class="col-lg-12">
+               <div class="form_title">
+                   <h1>Manage Customers</h1>
+               </div>
+           </div>
+              <form method="post" action="AddCustomer" enctype="multipart/form-data">
+                 {% csrf_token %}
+              <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Check In</label>
+                      <input type="datetime-local" name="Check_in" class="form-control" placeholder="Check In" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Check Out</label>
+                      <input type="datetime-local" name="Check_out" class="form-control" placeholder="Check Out" required>
+                  </div>
+              </div>
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">First Name</label>
+                      <input type="text" name="First_Name" class="form-control" placeholder="First Name" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" name="Last_Name" class="form-control" placeholder="Last Name" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Email</label>
+                      <input type="email" name="Email" class="form-control" placeholder="Email" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Mobile Number</label>
+                      <input type="text" name="Mobile_Number" class="form-control" placeholder="Mobile Number" required>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">ADULT</label>
+                        <select class="form-control" name="ADULT">
+                            <option value="ADULT">ADULT</option>
+                             <option value="1 ADULT">1 ADULT</option>
+                              <option value="2 ADULT">2 ADULT</option>
+                              <option value="3 ADULT">3 ADULT</option>
+                             <option value="4 ADULT">4 ADULT</option>
+                        </select>
+                  </div>
+              </div>
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">CHILDREN</label>
+                           <select class="form-control" name="CHILDREN">
+                                 <option value="CHILDREN">CHILDREN</option>
+                                 <option value="1 CHILDREN">1 CHILDREN</option>
+                                 <option value="2 CHILDREN">2 CHILDREN</option>
+                                 <option value="3 CHILDREN">3 CHILDREN</option>
+                                 <option value="4 CHILDREN">4 CHILDREN</option>
+                           </select>
+                  </div>
+              </div>
+                     <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Total Person</label>
+                      <input type="text" name="Total_Person" class="form-control" placeholder="Total Person" required>
+                  </div>
+              </div>
+                  <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Select Room</label>
+                           <select class="form-control" name="Select_Room">
+                                 <option value="Select Room">Select Room</option>
+                                 <option value=" Delux">Delux</option>
+                                 <option value=" Super Delux">Super Delux</option>
+                                 <option value=" Single">Single</option>
+                                 <option value=" Double">Double</option>
+                           </select>
+                  </div>
+              </div>
+                   <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Room Number</label>
+                           <select class="form-control" name="Room_Number">
+                                 <option value="Room Number">Room Number</option>
+                                 <option value=" Room101">Room101</option>
+                                 <option value=" Room102">Room102</option>
+                                 <option value="Room103">Room103</option>
+                                 <option value="Room104">Room104</option>
+                           </select>
+                  </div>
+              </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Gender</label>
+                      <select class="form-control" name="Gender" required>
+                          <option value="Gender">Gender</option>
+                          <option value="MALE">MALE</option>
+                          <option value="FEMALE">FEMALE</option>
+                      </select>
+                  </div>
+              </div>
+                <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Personal Identity</label>
+                      <input type="text" name="Personal_Identity" class="form-control" placeholder="NID/Birth certificate Number" required>
+                  </div>
+              </div>
+
+                   <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Upload Image</label>
+                      <input type="file" name="Upload_Image" class="form-control" placeholder="" required>
+                  </div>
+              </div>
+                   <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Country</label>
+                      <input type="text" name="Country" class="form-control" placeholder="Country" required>
+                  </div>
+              </div>
+              <div class="col-lg-12">
+                  <div class="form-group from_info">
+                      <label class="form-label">Address</label>
+                      <input type="text" name="Address" class="form-control" placeholder="Address" required>
+                  </div>
+              </div>
+              <div class="col-lg-12">
+                  <div class="form_btn">
+                      <button type="submit">Add</button>
+                  </div>
+                   <div class="form_btn">
+                      <button type="reset">Clear</button>
+                  </div>
+              </div>
+                  </form>
+          </div>
+              <div class="col-lg-6 form_right" style="background: blue;">
+                  <div class="col-lg-12">
+                      <div class="form_right_info">
+                          <form method="post" action="Search" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <div class="from_info1">
+                                   <div class="form-group">
+                                       <select class="form-control" name="departments" required>
+                                            <option value="Country">Country</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Uk">Uk</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Dubai">Dubai</option>
+                                            <option value="India">India</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Canada">Canada</option>
+                                       </select>
+                                     </div>
+                                  </div>
+                              <div class="from_info2">
+                                   <div class="form-group">
+                                       <input type="search" name="serch" class="form-control" placeholder="" required>
+                                   </div>
+                              </div>
+                              <div class="from_info3">
+                                    <div class="form_btn1">
+                                         <button type="submit">Search</button>
+                                     </div>
+                              </div>
+                              <div class="from_info4">
+                                    <div class="form_btn1">
+                                         <button type="submit">Show All</button>
+                                     </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-lg-12  form_table">
+                      <div id="example" class="example  table-wrapper-scroll-y my-custom-scrollbar">
+                        <table  class="table-bordered table-striped">
+                          <tr>
+                              <th>Customer Id</th>
+                              <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Mobile Number</th>
+                            <th>ADULT</th>
+                              <th>CHILDREN</th>
+                                <th>Total Person</th>
+                            <th>Select Room</th>
+                            <th>Room Number</th>
+                            <th>Gender</th>
+                              <th>Personal Identity</th>
+                               <th>Upload Image</th>
+                            <th>Country</th>
+                              <th>Address</th>
+                               <th>Action</th>
+                          </tr>
+                             {%if data %}
+
+                                    {% for i in data %}
+
+                                     <tr>
+                                          <td>{{i.Customer_Id}}</td>
+                                          <td>{{i.Check_in}}</td>
+                                          <td>{{i.Check_out}}</td>
+                                          <td>{{i.First_Name}}</td>
+                                          <td>{{i.Last_Name}}</td>
+                                          <td>{{i.Email}}</td>
+                                          <td>{{i.Mobile_Number}}</td>
+                                          <td>{{i.ADULT}}</td>
+                                          <td>{{i.CHILDREN}}</td>
+                                          <td>{{i.Total_Person}}</td>
+                                          <td>{{i.Select_Room}}</td>
+                                          <td>{{i.Room_Number}}</td>
+                                          <td>{{i.Gender}}</td>
+                                          <td>{{i.Personal_Identity}}</td>
+                                          <td>{{i.Upload_Image}}</td>
+                                          <td>{{i.Country}}</td>
+                                           <td>{{i.Address}}</td>
+                                          <td class="action">
+                                                   <a  href="{% url 'AddCustpage_Delete' id=i.Customer_Id%}">Delete</a>
+                                                   <a  href="{% url 'EditCustomer' id=i.Customer_Id%}">Update</a>
+                                          </td>
+                                     </tr>
+                             {%endfor%}
+
+                                  {% endif %}
+
+                        </table>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+ {% endblock %}
